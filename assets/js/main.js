@@ -3,7 +3,8 @@ var vm = new Vue({
 	data: {
 		complete: [],
 		view: "all",
-		favs: []
+		favs: [],
+		search_query: ""
 	},
 	computed: {
 		filtered: function(){
@@ -11,7 +12,7 @@ var vm = new Vue({
 				return this.favourites;
 			}
 
-			return this.complete;
+			return this.searched;
 		},
 		favourites: function(){
 			var favData = [];
@@ -22,6 +23,25 @@ var vm = new Vue({
 				}
 			});
 			return favData;
+		},
+		searched: function(){
+			if(this.search_query === ""){
+				return this.complete;
+			}
+
+			var searchData = [];
+			var searchQuery = this.search_query.toLowerCase();
+			var that = this;
+			this.complete.forEach(function(item){
+				if(item.brand.toLowerCase().indexOf(searchQuery) !== -1){
+					searchData.push(item);
+				} else if(item.product.toLowerCase().indexOf(searchQuery) !== -1){
+					searchData.push(item);
+				} else if(item.material.toLowerCase().indexOf(searchQuery) !== -1){
+					searchData.push(item);
+				}
+			});
+			return searchData;
 		}
 	},
 	methods: {

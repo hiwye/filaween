@@ -26,7 +26,7 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section navsection">
         <div class="container">
             <div class="tabs is-centered">
                 <ul class="is-left">
@@ -35,6 +35,9 @@
                     <li v-on:click="view = 'info'" v-bind:class="{'is-active':view=='info'}"><a>Info & Credits</a></li>
                 </ul>
             </div>
+            <p class="control" v-show="view === 'all' || view === 'favourites'">
+                <input class="input is-large" type="text" placeholder="Search" v-model="search_query" autofocus>
+            </p>
         </div>
     </section>
     <section class="section" v-show="view === 'all' || view === 'favourites'">
@@ -162,9 +165,15 @@
         </div>
         <div class="container has-text-centered" v-show="filtered.length <= 0">
             <div class="title">
-                <i class="fa fa-heart-o fa-3x"></i><br><br>
-                Nothing to see here (yet).
+                <i class="fa fa-frown-o fa-3x"></i><br><br>
+                There are no results.<br>
             </div>
+            <span v-show="view === 'favourites' && search_query === ''">
+                Add some favourites using the <i class="fa fa-heart"></i> button
+            </span>
+            <span v-show="search_query !== ''">
+                Try some different search terms
+            </span>
         </div>
     </section>
     <section class="section" v-show="view === 'info'">

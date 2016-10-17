@@ -8,5 +8,5 @@ It allows you to browse his 3D printer filament analysis data in a nice looking 
 ## Todo
 - [ ] Filters (maybe using sliders)
 - [ ] Comparison mode (compare two filaments side by side)
-- [ ] Text search
+- [X] Text search
 - [ ] Overview Mode (only thumbnails and brand names in a grid)
