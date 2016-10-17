@@ -41,7 +41,16 @@
             </div>
         </div>
     </section>
-    <section class="section navsection">
+    <noscript>
+        <section class="section">
+            <div class="container">
+                <div class="notification is-info">
+                    Please activate JavaScript to view this site. <a href="http://enable-javascript.com/">Learn how...</a>
+                </div>
+            </div>
+        </section>
+    </noscript>
+    <section class="section navsection" v-cloak>
         <div class="container">
             <div class="tabs is-centered">
                 <ul class="is-left">
@@ -55,7 +64,7 @@
             </p>
         </div>
     </section>
-    <section class="section" v-show="view === 'all' || view === 'favourites'">
+    <section class="section" v-show="view === 'all' || view === 'favourites'" v-cloak>
         <div class="container">
             <div class="box" v-for="result in filtered">
                 <article class="media">
@@ -191,7 +200,7 @@
             </span>
         </div>
     </section>
-    <section class="section" v-show="view === 'info'">
+    <section class="section" v-show="view === 'info'" v-cloak>
         <div class="container">
             <div class="content">
                 <h2 class="title">Introduction</h2>

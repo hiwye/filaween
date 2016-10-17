@@ -7,3 +7,7 @@
 tr.is-highlighted {
   background: rgba($turquoise, 0.15);
 }
+
+[v-cloak] {
+  display: none;
+}
