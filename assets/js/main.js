@@ -33,11 +33,8 @@ var vm = new Vue({
 			var searchQuery = this.search_query.toLowerCase();
 			var that = this;
 			this.complete.forEach(function(item){
-				if(item.brand.toLowerCase().indexOf(searchQuery) !== -1){
-					searchData.push(item);
-				} else if(item.product.toLowerCase().indexOf(searchQuery) !== -1){
-					searchData.push(item);
-				} else if(item.material.toLowerCase().indexOf(searchQuery) !== -1){
+				var searchMatcher = item.brand+' '+item.product+' '+item.material;
+				if(searchMatcher.toLowerCase().indexOf(searchQuery) !== -1){
 					searchData.push(item);
 				}
 			});
