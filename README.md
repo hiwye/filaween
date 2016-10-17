@@ -1,4 +1,4 @@
-# Filaween ![Travis-CI Build](https://api.travis-ci.org/hiwye/filaween.svg?branch=master)
+# Filaween [![Travis-CI Build](https://api.travis-ci.org/hiwye/filaween.svg?branch=master)](https://travis-ci.org/hiwye/filaween)
 
 https://www.filaween.com/
 
