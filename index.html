@@ -35,7 +35,7 @@
                     <li v-on:click="view = 'info'" v-bind:class="{'is-active':view=='info'}"><a>Info & Credits</a></li>
                 </ul>
             </div>
-            <p class="control" v-show="view === 'all' || view === 'favourites'">
+            <p class="control" v-show="view === 'all'">
                 <input class="input is-large" type="text" placeholder="Search" v-model="search_query" autofocus>
             </p>
         </div>
