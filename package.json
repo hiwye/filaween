@@ -1,0 +1,23 @@
+{
+  "name": "filaween",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "bulma": "^0.2.3",
+    "jquery": "^3.1.1",
+    "lity": "^2.2.0",
+    "vue": "^1.0.28",
+    "vue-resource": "^1.0.3"
+  }
+}
