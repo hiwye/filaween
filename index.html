@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Filaween</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="node_modules/lity/dist/lity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+<div class="wrap" id="app">
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    # <b>Filaween</b>
+                </h1>
+                <h2 class="subtitle">
+                    Explore and compare 3D printing filaments
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="tabs is-centered">
+                <ul class="is-left">
+                    <li v-on:click="view = 'all'" v-bind:class="{'is-active':view=='all'}"><a>All</a></li>
+                    <li v-on:click="view = 'favourites'" v-bind:class="{'is-active':view=='favourites'}"><a>Favourites</a></li>
+                    <li v-on:click="view = 'info'" v-bind:class="{'is-active':view=='info'}"><a>Info & Credits</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section" v-show="view === 'all' || view === 'favourites'">
+        <div class="container">
+            <div class="box" v-for="result in filtered">
+                <article class="media">
+                    <div class="media-left is-hidden-mobile">
+                        <figure class="image is-128x128">
+                            <img :src="'./content/filament-images/'+result.id+'.png'" alt="Image of {{result.brand+' '+result.product}}">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong class="title">{{result.brand+' '+result.product}}</strong>
+                                <span>({{result.material}})</span>
+                            </p>
+                            <div class="columns">
+                                <div class="column">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Retail Price per kg</td>
+                                            <td><b>{{result.price_per_kg}} €</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ease of use</td>
+                                            <td><b>{{result.ease_of_use}}/5</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Temperature stability</td>
+                                            <td><b>{{result.strength.misc.temperature_stability}}/5</b></td>
+                                        </tr>
+                                    </table>
+                                    <table class="table">
+                                        <tr>
+                                            <td>Nozzle Temperature</td>
+                                            <td><b>{{result.printer.nozzle_temp}} °C</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Print Bed Temperature</td>
+                                            <td><b>{{result.printer.bed_temp}} °C</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Print Bed Material</td>
+                                            <td><b>{{result.printer.bed_material}}</b></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="column">
+                                    <table class="table">
+                                        <tr class="is-hidden-mobile">
+                                            <td>3D Benchy Score</td>
+                                            <td>{{result.quality.threedbenchy}}/5</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Overhangs</td>
+                                            <td>{{result.quality.overhangs}}/5</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Fine Details</td>
+                                            <td>{{result.quality.details}}/5</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Bridges</td>
+                                            <td>{{result.quality.bridges}}/5</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Warp</td>
+                                            <td>{{result.quality.warp}}</td>
+                                        </tr>
+                                        <tr class="is-highlighted">
+                                            <td>Overall Quality</td>
+                                            <td><b>{{result.quality.rated}}/20</b></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="column">
+                                    <table class="table">
+                                        <tr class="is-hidden-mobile">
+                                            <td>Bend - Layer strength</td>
+                                            <td>{{result.strength.bend.strength}} kg</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Bend - Layer adhesion</td>
+                                            <td>{{result.strength.bend.adhesion}} kg</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Pull - Layer strength</td>
+                                            <td>{{result.strength.pull.strength}} kg</td>
+                                        </tr>
+                                        <tr class="is-hidden-mobile">
+                                            <td>Pull - Layer adhesion</td>
+                                            <td>{{result.strength.pull.adhesion}} kg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bend flex at 1kg load</td>
+                                            <td><b>{{result.strength.misc.bendflex}} mm</b></td>
+                                        </tr>
+                                        <tr class="is-highlighted">
+                                            <td>Rated Strength</td>
+                                            <td><b>{{result.strength.rated}} kg</b></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="level">
+                            <div class="level-left">
+                                <p class="level-item">
+                                    <a class="button" v-bind:class="{'is-danger':isFavourite(result.id)}" v-on:click="toggleFavourite(result.id)">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="level-right">
+                                <p class="level-item">
+                                    <a class="button is-dark" :href="result.links.video" data-lity>Watch video</a>
+                                    <a class="button is-info" v-show="result.links.purchase" :href="result.links.purchase" target="_blank">Purchase online</a>
+                                </p>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="container has-text-centered" v-show="filtered.length <= 0">
+            <div class="title">
+                <i class="fa fa-heart-o fa-3x"></i><br><br>
+                Nothing to see here (yet).
+            </div>
+        </div>
+    </section>
+    <section class="section" v-show="view === 'info'">
+        <div class="container">
+            <div class="content">
+                <h2 class="title">Introduction</h2>
+                <p>
+                    This site allows you to compare result data of a filament analysis
+                    series conducted by <a href="http://toms3d.org/">Thomas Sanladerer</a> on his
+                    <a href="https://www.youtube.com/user/ThomasSanladerer">YouTube channel</a>.<br>
+
+                    You may watch his introduction to the series using
+                    <a href="https://www.youtube.com/watch?v=YcQHbaVeD7I">this link</a>.
+                </p>
+                <p>
+                    It is developed and maintained by <a href="http://sebastianwalker.org">Sebastian Walker</a>.
+                </p>
+
+                <h2 class="title">Data</h2>
+                <p>
+                    All analysis data has been extracted from Thomas' videos and formatted to JSON.
+                </p>
+                <p>
+                    You may access the JSON file this site reads from using <a href="./content/data.json">this link</a>.
+                    Thomas has also put together a
+                    <a href="https://docs.google.com/spreadsheets/d/1j9QazgoocuzHxg6qUXevq3dpAmmT2E87089FX6gRgWU/edit#gid=0">Google Docs</a>
+                    sheet with the complete data.
+                </p>
+                <p>
+                    <i>
+                        If you encounter any incorrect data, please shoot me an email at
+                        <a href="mailto:sebastian@sebastianwalker.org">sebastian@sebastianwalker.org</a>.
+                    </i>
+                </p>
+
+                <h2 class="title">Techie Stuff</h2>
+                <p>
+                    This site is powered by the <a href="http://vuejs.org/">Vue.js</a> library. It uses
+                    <a href="http://bulma.io/">Bulma</a> as a UI framework.<br>
+                    Favourites are stored in localStorage.
+                </p>
+                <p>
+                    Pretty simple, huh?
+                </p>
+                <p>
+                    <a href="https://github.com/hiwye/filaween">Source code on GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>#Filaween</strong> by <a href="http://sebastianwalker.org">Sebastian Walker</a>
+                    and <a href="http://toms3d.com">Thomas Sanladerer</a>.
+                </p>
+                <p>
+                    <a href="https://walkermedia.de/about/legal.html">
+                        Impressum und Datenschutz
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62151491-5', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/vue-resource/dist/vue-resource.min.js"></script>
+<script src="node_modules/lity/dist/lity.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
