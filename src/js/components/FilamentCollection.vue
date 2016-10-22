@@ -107,7 +107,7 @@
                         possibilities.push(item.material);
                     }
                 });
-                return possibilities;
+                return possibilities.sort();
             }
         },
         methods: {
