@@ -1,5 +1,9 @@
 @import "../../node_modules/bulma/bulma";
 
+.box.featured {
+  outline: solid 1px orange;
+}
+
 section.navsection {
   padding-bottom: 0;
 }
