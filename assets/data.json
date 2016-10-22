@@ -9,7 +9,7 @@
       "bed_temp":55,
       "fan":"full"
     },
-    "price_per_kg":20.00,
+    "price_per_kg":20,
     "quality":{
       "rated":16,
       "threedbenchy":5,
@@ -50,7 +50,7 @@
       "bed_temp":100,
       "fan":"no"
     },
-    "price_per_kg":20.00,
+    "price_per_kg":20,
     "quality":{
       "rated":11,
       "threedbenchy":3,
@@ -80,5 +80,169 @@
       "purchase":null
     },
     "id":"generic-abs"
+  },
+  {
+    "material":"PLA",
+    "brand":"Fillamentum",
+    "product":"Extrafill",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":35,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":3,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":51,
+      "bend":{
+        "strength":4.25,
+        "adhesion":2.25
+      },
+      "pull":{
+        "strength":12,
+        "adhesion":5.75
+      },
+      "misc":{
+        "bendflex":12,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=UHcN1hV1A5w",
+      "purchase":null
+    },
+    "id":"fillamentum-extrafill-pla"
+  },
+  {
+    "material":"PLA",
+    "brand":"3DPrima",
+    "product":"PrimaSelect PLA",
+    "printer":{
+      "nozzle_temp":215,
+      "bed_material":"Magigoo",
+      "bed_temp":65,
+      "fan":"full"
+    },
+    "price_per_kg":40,
+    "quality":{
+      "rated":17,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":4,
+      "bridges":4,
+      "warp":"slight"
+    },
+    "strength":{
+      "rated":48,
+      "bend":{
+        "strength":4.5,
+        "adhesion":2.25
+      },
+      "pull":{
+        "strength":9.75,
+        "adhesion":5.5
+      },
+      "misc":{
+        "bendflex":13,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=rdD5lAE7YAw",
+      "purchase":null
+    },
+    "id":"3dprima-primaselect-pla"
+  },
+  {
+    "material":"PLA",
+    "brand":"Faberdashery",
+    "product":"PLA",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":63,
+    "quality":{
+      "rated":17,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":47,
+      "bend":{
+        "strength":2.75,
+        "adhesion":2.75
+      },
+      "pull":{
+        "strength":12,
+        "adhesion":4.25
+      },
+      "misc":{
+        "bendflex":12,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=_w50w8AUkF0",
+      "purchase":null
+    },
+    "id":"faberdashery-pla-pla"
+  },
+  {
+    "material":"PLA composite",
+    "brand":"Protopasta",
+    "product":"Matte Fiber",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":35,
+    "quality":{
+      "rated":13,
+      "threedbenchy":4,
+      "overhangs":5,
+      "details":3,
+      "bridges":1,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":19.75,
+      "bend":{
+        "strength":1.75,
+        "adhesion":0.25
+      },
+      "pull":{
+        "strength":6.75,
+        "adhesion":2
+      },
+      "misc":{
+        "bendflex":16,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=5CUU5739dT0",
+      "purchase":null
+    },
+    "id":"protopasta-mattefiber-pla"
   }
 ]
