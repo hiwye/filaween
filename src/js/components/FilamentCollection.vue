@@ -11,6 +11,18 @@
             <div class="box is-success" v-show="show_filters">
                 <div class="columns">
                     <div class="column">
+                        <b>Sorting</b>
+                        <p class="control">
+                          <span class="select is-fullwidth">
+                            <select v-model="sort_mode">
+                              <option value="default">Default</option>
+                              <option value="alphabet">Alphabetical</option>
+                              <option value="revchron">Chronological</option>
+                            </select>
+                          </span>
+                        </p>
+                    </div>
+                    <div class="column">
                         <b>Material</b>
                         <p class="control">
                           <span class="select is-fullwidth">
@@ -52,7 +64,7 @@
     var Filament = require('./Filament.vue');
     var CollectionEmpty = require('../partials/CollectionEmpty.vue');
     export default {
-        props: ['items','searchable'],
+        props: ['items','searchable', 'featured'],
         components: {Filament, CollectionEmpty},
         data () {
             return {
@@ -61,7 +73,8 @@
                 filter_material: '',
                 filter_price: 200,
                 filter_quality: 0,
-                filter_strength: 0
+                filter_strength: 0,
+                sort_mode: 'default'
             }
         },
         computed: {
@@ -69,6 +82,7 @@
                 var searchable = this.items;
                 var searched = [];
                 var filtered = [];
+                var sorted = [];
 
                 //SEARCH
                 if(this.search === "") {
@@ -84,7 +98,6 @@
                 }
 
                 //FILTER
-                // Still work in progress
                 var that = this;
                 searched.forEach(function (item) {
                     if(
@@ -97,7 +110,19 @@
                     }
                 });
 
-                return filtered;
+                //SORT
+                if(this.sort_mode === 'revchron'){
+                    //reverse chronological
+                    sorted = this.revchronSorter(filtered);
+                }else if(this.sort_mode === 'alphabet'){
+                    //alphabetical
+                    sorted = this.alphabeticalSorter(filtered);
+                }else{
+                    //default
+                    sorted = this.featuredSorter(filtered);
+                }
+
+                return sorted;
             },
 
             materialOptions() {
@@ -140,7 +165,41 @@
                 this.filter_price = 200;
                 this.filter_quality = 0;
                 this.filter_strength = 0;
-                this.show_filters = false;
+                this.sort_mode = 'default';
+            },
+
+            alphabeticalSorter(items){
+                return items.sort(function(a, b){
+                    if ( a.id < b.id )
+                        return -1;
+                    if ( a.id > b.id )
+                        return 1;
+                    return 0;
+                });
+            },
+
+            revchronSorter(items){
+                return items.reverse();
+            },
+
+            featuredSorter(items){
+                items = this.alphabeticalSorter(items);
+
+                if(this.search !== '' || this.featured == false)
+                    return items;
+
+                var featured = items.filter(function(element, index){
+                    if(element.featured){
+                        items.splice(index, 1);
+                        return true;
+                    }else{
+                        return false;
+                    }
+                });
+
+                var regular = items.reverse();
+
+                return featured.concat(regular);
             }
         }
     }
