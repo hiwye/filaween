@@ -1,24 +1,23 @@
 {
   "name": "filaween",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/hiwye/filaween.git",
+    "type": "git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
-    "is-my-json-valid": "^2.15.0"
-  },
+  "author": "Sebastian Walker <info@walkermedia.de>",
+  "license": "MIT",
   "dependencies": {
+    "browserify": "^13.1.0",
     "bulma": "^0.2.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^2.3.2",
     "jquery": "^3.1.1",
     "lity": "^2.2.0",
-    "vue": "^1.0.28",
-    "vue-resource": "^1.0.3"
+    "vue": "^2.0.3",
+    "vue-resource": "^1.0.3",
+    "vueify": "^9.2.4"
   }
 }
