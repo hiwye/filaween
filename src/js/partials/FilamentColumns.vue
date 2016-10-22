@@ -29,6 +29,10 @@
                     <td>Print Bed Material</td>
                     <td><b>{{item.printer.bed_material}}</b></td>
                 </tr>
+                <tr>
+                    <td>Cooling Fan</td>
+                    <td><b>{{item.printer.fan}}</b></td>
+                </tr>
             </table>
         </div>
 

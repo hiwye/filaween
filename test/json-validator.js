@@ -43,6 +43,11 @@ var validate = validator({
                         required: true,
                         description: "Bed temperature",
                         type: "number"
+                    },
+                    fan: {
+                        required: true,
+                        description: "Fan?",
+                        type: "string"
                     }
                 }
             },
