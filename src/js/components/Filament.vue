@@ -3,7 +3,9 @@
         <article class="media">
             <div class="media-left is-hidden-mobile">
                 <figure class="image is-128x128">
-                    <img v-bind:src="'./assets/filament-images/'+item.id+'.png'" v-bind:alt="'Image of '+item.brand+' '+item.product">
+                    <a v-bind:href="'./assets/filament-images/'+item.id+'.png'" data-lity>
+                        <img v-bind:src="'./assets/filament-images/'+item.id+'.png'" v-bind:alt="'Image of '+item.brand+' '+item.product">
+                    </a>
                 </figure>
             </div>
             <div class="media-content">
