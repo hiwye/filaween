@@ -25810,10 +25810,321 @@ return Vue$3;
 })));
 
 },{}],8:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+
+var FilamentColumns = require('../partials/FilamentColumns.vue');
+var FilamentFooter = require('../partials/FilamentFooter.vue');
+exports.default = {
+    props: ['item'],
+    components: { FilamentColumns: FilamentColumns, FilamentFooter: FilamentFooter }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"box"},[_h('article',{staticClass:"media"},[_h('div',{staticClass:"media-left is-hidden-mobile"},[_h('figure',{staticClass:"image is-128x128"},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.id+'.png',"alt":'Image of '+item.brand+' '+item.product}})])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('p',[_h('strong',{staticClass:"title"},[_s(item.brand+' '+item.product)])," ",_h('span',["("+_s(item.material)+")"])])," ",_h('filament-columns',{attrs:{"item":item}})])," ",_h('filament-footer',{attrs:{"item":item}})])])])}}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-6", __vue__options__)
+  }
+})()}
+},{"../partials/FilamentColumns.vue":12,"../partials/FilamentFooter.vue":13,"vue":6,"vue-hot-reload-api":4}],9:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+
+var Filament = require('./Filament.vue');
+exports.default = {
+    props: ['items', 'searchable', 'filterable'],
+    components: { Filament: Filament },
+    data: function data() {
+        return {
+            search: ''
+        };
+    },
+
+    computed: {
+        filtered: function filtered() {
+            var searchable = this.items;
+            var searched = [];
+            var filtered = [];
+
+            if (this.search === "") {
+                searched = searchable;
+            } else {
+                var searchQuery = this.search.toLowerCase();
+                searchable.forEach(function (item) {
+                    var matchingString = [item.brand, item.product, item.material].join(' ').toLowerCase();
+                    if (matchingString.indexOf(searchQuery) !== -1) {
+                        searched.push(item);
+                    }
+                });
+            }
+
+            filtered = searched;
+
+            return filtered;
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('div',{staticClass:"container"},[_h('div',{directives:[{name:"show",rawName:"v-show",value:(searchable == true),expression:"searchable == true"}],staticClass:"control"},[_h('input',{directives:[{name:"model",rawName:"v-model",value:(search),expression:"search"}],staticClass:"input is-large",attrs:{"type":"text","placeholder":"Search","autofocus":""},domProps:{"value":_s(search)},on:{"input":function($event){if($event.target.composing)return;search=$event.target.value}}})])," ",_l((filtered),function(item){return _h('filament',{attrs:{"item":item}})})])])}}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-5", __vue__options__)
+  }
+})()}
+},{"./Filament.vue":8,"vue":6,"vue-hot-reload-api":4}],10:[function(require,module,exports){
+'use strict';
+
+window.Vue = require('../../node_modules/vue/dist/vue.js');
+window.VueResource = require('vue-resource');
+window.Zepto = require('jquery');
+window.Lity = require('lity');
+
+var AllView = require('./views/AllView.vue');
+var FavouritesView = require('./views/FavouritesView.vue');
+var PageHeader = require('./partials/PageHeader.vue');
+var PageNav = require('./partials/PageNav.vue');
+var PageFooter = require('./partials/PageFooter.vue');
+
+var vm = new Vue({
+    el: '#app',
+    components: { AllView: AllView, FavouritesView: FavouritesView, PageHeader: PageHeader, PageNav: PageNav, PageFooter: PageFooter },
+    data: {
+        view: 'all',
+        filaments: []
+    },
+    methods: {
+        fetch: function fetch() {
+            var _this = this;
+
+            this.$http.get('assets/data.json').then(function (data) {
+                _this.filaments = data.data;
+            });
+        },
+        changeView: function changeView(view) {
+            this.view = view;
+        }
+    }
+});
+
+vm.fetch();
+
+},{"../../node_modules/vue/dist/vue.js":7,"./partials/PageFooter.vue":14,"./partials/PageHeader.vue":15,"./partials/PageNav.vue":16,"./views/AllView.vue":17,"./views/FavouritesView.vue":18,"jquery":1,"lity":2,"vue-resource":5}],11:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+    data: function data() {
+        return {
+            favs: []
+        };
+    },
+
+    created: function created() {
+        this.getFavourites();
+    },
+
+
+    methods: {
+        toggleFavourite: function toggleFavourite(id) {
+            this.getFavourites();
+
+            if (this.isFavourite(id)) {
+                this.favs.splice(this.favs.indexOf(id), 1);
+            } else {
+                this.favs.push(id);
+            }
+
+            this.setFavourites();
+        },
+        isFavourite: function isFavourite(id) {
+            return this.favs.indexOf(id) !== -1;
+        },
+        getFavourites: function getFavourites() {
+            try {
+                var favs = JSON.parse(localStorage.getItem('favourites'));
+                if (favs === null) {
+                    this.favs = [];
+                } else {
+                    this.favs = favs;
+                }
+            } catch (e) {
+                this.favs = [];
+            }
+        },
+        setFavourites: function setFavourites() {
+            localStorage.setItem('favourites', JSON.stringify(this.favs));
+        }
+    }
+};
+
+},{}],12:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['item']
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(0)," ",_h('td',[_h('b',[_s(item.price_per_kg)+" €"])])])," ",_h('tr',[_m(1)," ",_h('td',[_h('b',[_s(item.ease_of_use)+"/5"])])])," ",_h('tr',[_m(2)," ",_h('td',[_h('b',[_s(item.strength.misc.temperature_stability)+"/5"])])])])," ",_h('table',{staticClass:"table"},[_h('tr',[_m(3)," ",_h('td',[_h('b',[_s(item.printer.nozzle_temp)+" °C"])])])," ",_h('tr',[_m(4)," ",_h('td',[_h('b',[_s(item.printer.bed_temp)+" °C"])])])," ",_h('tr',[_m(5)," ",_h('td',[_h('b',[_s(item.printer.bed_material)])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(6)," ",_h('td',[_s(item.quality.threedbenchy)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(7)," ",_h('td',[_s(item.quality.overhangs)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(8)," ",_h('td',[_s(item.quality.details)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(9)," ",_h('td',[_s(item.quality.bridges)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(10)," ",_h('td',[_s(item.quality.warp)])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(11)," ",_h('td',[_h('b',[_s(item.quality.rated)+"/20"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(12)," ",_h('td',[_s(item.strength.bend.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(13)," ",_h('td',[_s(item.strength.bend.adhesion)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(14)," ",_h('td',[_s(item.strength.pull.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(15)," ",_h('td',[_s(item.strength.pull.adhesion)+" kg"])])," ",_h('tr',[_m(16)," ",_h('td',[_h('b',[_s(item.strength.misc.bendflex)+" mm"])])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(17)," ",_h('td',[_h('b',[_s(item.strength.rated)+" kg"])])])])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('td',["Retail Price per kg"])}},function(){with(this){return _h('td',["Ease of use"])}},function(){with(this){return _h('td',["Temperature stability"])}},function(){with(this){return _h('td',["Nozzle Temperature"])}},function(){with(this){return _h('td',["Print Bed Temperature"])}},function(){with(this){return _h('td',["Print Bed Material"])}},function(){with(this){return _h('td',["3D Benchy Score"])}},function(){with(this){return _h('td',["Overhangs"])}},function(){with(this){return _h('td',["Fine Details"])}},function(){with(this){return _h('td',["Bridges"])}},function(){with(this){return _h('td',["Warp"])}},function(){with(this){return _h('td',["Overall Quality"])}},function(){with(this){return _h('td',["Bend - Layer strength"])}},function(){with(this){return _h('td',["Bend - Layer adhesion"])}},function(){with(this){return _h('td',["Pull - Layer strength"])}},function(){with(this){return _h('td',["Pull - Layer adhesion"])}},function(){with(this){return _h('td',["Bend flex at 1kg load"])}},function(){with(this){return _h('td',["Rated Strength"])}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-9", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":4}],13:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+
+var ManagesFavourites = require('../mixins/ManagesFavourites.js');
+exports.default = {
+    props: ['item'],
+    mixins: [ManagesFavourites]
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('nav',{staticClass:"level"},[_h('div',{staticClass:"level-left"},[_h('p',{staticClass:"level-item"},[_h('a',{staticClass:"button",class:{'is-danger':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(0)])])])," ",_h('div',{staticClass:"level-right"},[_h('p',{staticClass:"level-item"},[_h('a',{staticClass:"button is-dark",attrs:{"href":item.links.video,"data-lity":""}},["Watch video"])," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button is-info",attrs:{"href":item.links.purchase,"target":"_blank"}},["Purchase online"])])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('i',{staticClass:"fa fa-heart"})}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-8", __vue__options__)
+  }
+})()}
+},{"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}],14:[function(require,module,exports){
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function(){with(this){return _m(0)}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('h1',["All View"])}}]
+__vue__options__.staticRenderFns = [function(){with(this){return _h('footer',{staticClass:"footer"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('p',[_h('strong',["#Filaween"])," by ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),"\n                and ",_h('a',{attrs:{"href":"http://toms3d.org"}},["Thomas Sanladerer"]),".\n            "])," ",_h('p',[_h('a',{attrs:{"href":"https://walkermedia.de/about/legal.html"}},["\n                    Impressum und Datenschutz\n                "])])])])])}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-4", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":4}],15:[function(require,module,exports){
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _m(0)}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('section',{staticClass:"hero is-primary is-bold"},[_h('div',{staticClass:"hero-body"},[_h('div',{staticClass:"container"},[_h('h1',{staticClass:"title"},["\n                # ",_h('b',["Filaween"])])," ",_h('h2',{staticClass:"subtitle"},["\n                Explore and compare 3D printing filaments\n            "])])])])}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-3", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":4}],16:[function(require,module,exports){
+;(function(){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['view'],
+    data: function data() {
+        return {
+            items: {
+                all: "All",
+                favourites: "Favourites",
+                info: "Info & Credits"
+            }
+        };
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section navsection"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"tabs is-centered"},[_h('ul',{staticClass:"is-left"},[_l((items),function(item,key){return _h('li',{class:{'is-active':view==key},on:{"click":function($event){$emit('view',key)}}},[_h('a',[_s(item)])])})])])])])}}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-2", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":4}],17:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+
+var FilamentCollection = require('../components/FilamentCollection.vue');
+exports.default = {
+    components: { FilamentCollection: FilamentCollection },
+    props: ['filaments']
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('filament-collection',{attrs:{"searchable":"1","filterable":"1","items":filaments}})}}
+__vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -25824,19 +26135,50 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
-},{"vue":6,"vue-hot-reload-api":4}],9:[function(require,module,exports){
-window.Vue = require('../../node_modules/vue/dist/vue.js');
-window.VueResource = require('vue-resource');
-window.Zepto = require('jquery');
-window.Lity = require('lity');
+},{"../components/FilamentCollection.vue":9,"vue":6,"vue-hot-reload-api":4}],18:[function(require,module,exports){
+;(function(){
+'use strict';
 
-var AllView = require('./components/AllView.vue');
-
-vm = new Vue({
-    el: '#app',
-    components: {AllView},
-    data: {
-        view: 'all'
-    }
+Object.defineProperty(exports, "__esModule", {
+    value: true
 });
-},{"../../node_modules/vue/dist/vue.js":7,"./components/AllView.vue":8,"jquery":1,"lity":2,"vue-resource":5}]},{},[9]);
+
+
+var FilamentCollection = require('../components/FilamentCollection.vue');
+var ManagesFavourites = require('../mixins/ManagesFavourites.js');
+exports.default = {
+    components: { FilamentCollection: FilamentCollection },
+    props: ['filaments'],
+    mixins: [ManagesFavourites],
+    computed: {
+        favourites: function favourites() {
+            var items = [];
+            var that = this;
+
+            this.filaments.forEach(function (item) {
+                if (that.isFavourite(item.id)) {
+                    items.push(item);
+                }
+            });
+
+            return items;
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('filament-collection',{attrs:{"searchable":"0","filterable":"1","items":favourites}})}}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-7", __vue__options__)
+  }
+})()}
+},{"../components/FilamentCollection.vue":9,"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}]},{},[10]);

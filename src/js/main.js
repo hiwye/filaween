@@ -3,12 +3,29 @@ window.VueResource = require('vue-resource');
 window.Zepto = require('jquery');
 window.Lity = require('lity');
 
-var AllView = require('./components/AllView.vue');
+var AllView = require('./views/AllView.vue');
+var FavouritesView = require('./views/FavouritesView.vue');
+var PageHeader = require('./partials/PageHeader.vue');
+var PageNav = require('./partials/PageNav.vue');
+var PageFooter = require('./partials/PageFooter.vue');
 
-vm = new Vue({
+var vm = new Vue({
     el: '#app',
-    components: {AllView},
+    components: {AllView, FavouritesView, PageHeader, PageNav, PageFooter},
     data: {
-        view: 'all'
+        view: 'all',
+        filaments: []
+    },
+    methods: {
+        fetch() {
+            this.$http.get('assets/data.json').then((data) => {
+                this.filaments = data.data;
+            });
+        },
+        changeView(view) {
+            this.view = view;
+        }
     }
 });
+
+vm.fetch();
