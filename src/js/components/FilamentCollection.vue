@@ -6,14 +6,17 @@
             </div>
 
             <filament v-for="item in filtered" :item="item"></filament>
+
+            <collection-empty v-show="filtered.length == 0"></collection-empty>
         </div>
     </section>
 </template>
 <script>
     var Filament = require('./Filament.vue');
+    var CollectionEmpty = require('../partials/CollectionEmpty.vue');
     export default {
         props: ['items','searchable','filterable'],
-        components: {Filament},
+        components: {Filament, CollectionEmpty},
         data () {
             return {
                 search: ''
