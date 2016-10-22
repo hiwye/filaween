@@ -25909,13 +25909,14 @@ window.Lity = require('lity');
 
 var AllView = require('./views/AllView.vue');
 var FavouritesView = require('./views/FavouritesView.vue');
+var InfoView = require('./views/InfoView.vue');
 var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
 var PageFooter = require('./partials/PageFooter.vue');
 
 var vm = new Vue({
     el: '#app',
-    components: { AllView: AllView, FavouritesView: FavouritesView, PageHeader: PageHeader, PageNav: PageNav, PageFooter: PageFooter },
+    components: { AllView: AllView, FavouritesView: FavouritesView, InfoView: InfoView, PageHeader: PageHeader, PageNav: PageNav, PageFooter: PageFooter },
     data: {
         view: 'all',
         filaments: []
@@ -25936,7 +25937,7 @@ var vm = new Vue({
 
 vm.fetch();
 
-},{"../../node_modules/vue/dist/vue.js":7,"./partials/PageFooter.vue":14,"./partials/PageHeader.vue":15,"./partials/PageNav.vue":16,"./views/AllView.vue":17,"./views/FavouritesView.vue":18,"jquery":1,"lity":2,"vue-resource":5}],11:[function(require,module,exports){
+},{"../../node_modules/vue/dist/vue.js":7,"./partials/PageFooter.vue":14,"./partials/PageHeader.vue":15,"./partials/PageNav.vue":16,"./views/AllView.vue":17,"./views/FavouritesView.vue":18,"./views/InfoView.vue":19,"jquery":1,"lity":2,"vue-resource":5}],11:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -26181,4 +26182,19 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
-},{"../components/FilamentCollection.vue":9,"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}]},{},[10]);
+},{"../components/FilamentCollection.vue":9,"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}],19:[function(require,module,exports){
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _m(0)}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('section',{staticClass:"section"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_h('h2',{staticClass:"title"},["Introduction"])," ",_h('p',["\n                This site allows you to compare result data of a filament analysis\n                series conducted by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," on his\n                ",_h('a',{attrs:{"href":"https://www.youtube.com/user/ThomasSanladerer"}},["YouTube channel"]),".",_h('br'),"\n\n                You may watch his introduction to the series using\n                ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=YcQHbaVeD7I"}},["this link"]),".\n            "])," ",_h('h2',{staticClass:"title"},["Credits"])," ",_h('p',["\n                The site is a joint effort by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," and\n                ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),".\n            "])," ",_h('p',["\n                Thomas Sanladerer — Filament Testing and Analysis",_h('br'),"\n                Sebastian Walker — Site Maintenance and Development\n            "])," ",_h('h2',{staticClass:"title"},["Data"])," ",_h('p',["\n                You may access the JSON file this site reads from using ",_h('a',{attrs:{"href":"./assets/data.json"}},["this link"]),".\n                Thomas has also put together a\n                ",_h('a',{attrs:{"href":"https://docs.google.com/spreadsheets/d/1j9QazgoocuzHxg6qUXevq3dpAmmT2E87089FX6gRgWU/edit#gid=0"}},["Google Docs"]),"\n                sheet with the complete data.\n            "])," ",_h('p',[_h('i',["\n                    If you encounter any incorrect data, please shoot Sebastian an email at\n                    ",_h('a',{attrs:{"href":"mailto:sebastian@sebastianwalker.org"}},["sebastian@sebastianwalker.org"]),".\n                "])])," ",_h('h2',{staticClass:"title"},["Techie Stuff"])," ",_h('p',["\n                This site is powered by the ",_h('a',{attrs:{"href":"http://vuejs.org/"}},["Vue.js"])," library, utilizing .vue components.\n                It uses ",_h('a',{attrs:{"href":"http://bulma.io/"}},["Bulma"])," as a UI framework.",_h('br'),"\n                Favourites are stored in localStorage.\n            "])," ",_h('p',["\n                Pretty simple, huh?\n            "])," ",_h('p',[_h('a',{attrs:{"href":"https://github.com/hiwye/filaween"}},["Source code on GitHub"])])])])])}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-10", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-10", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":4}]},{},[10]);

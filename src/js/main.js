@@ -5,13 +5,14 @@ window.Lity = require('lity');
 
 var AllView = require('./views/AllView.vue');
 var FavouritesView = require('./views/FavouritesView.vue');
+var InfoView = require('./views/InfoView.vue');
 var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
 var PageFooter = require('./partials/PageFooter.vue');
 
 var vm = new Vue({
     el: '#app',
-    components: {AllView, FavouritesView, PageHeader, PageNav, PageFooter},
+    components: {AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
     data: {
         view: 'all',
         filaments: []
