@@ -1,6 +1,5 @@
 // Configuration
 const DATA_PATH = './assets/data.json';
-const ORDER_MODE = 'ALPHABET'; //REVCHRON - Reverse chronological; ALPHABET - Alphabetically
 
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
@@ -27,17 +26,7 @@ var vm = new Vue({
     methods: {
         fetch() {
             this.$http.get(DATA_PATH).then((data) => {
-                if(ORDER_MODE === 'REVCHRON'){
-                    this.filaments = data.data.reverse();
-                }else{
-                    this.filaments = data.data.sort(function(a, b){
-                        if ( a.id < b.id )
-                            return -1;
-                        if ( a.id > b.id )
-                            return 1;
-                        return 0;
-                    });
-                }
+                this.filaments = data.data;
             });
         },
         changeView(view) {
