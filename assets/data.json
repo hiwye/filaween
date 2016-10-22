@@ -82,6 +82,7 @@
     "id":"generic-abs"
   },
   {
+    "featured":true,
     "material":"PLA",
     "brand":"Fillamentum",
     "product":"Extrafill",
