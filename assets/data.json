@@ -6,7 +6,8 @@
     "printer":{
       "nozzle_temp":210,
       "bed_material":"PEI",
-      "bed_temp":55
+      "bed_temp":55,
+      "fan":"full"
     },
     "price_per_kg":20.00,
     "quality":{
@@ -46,7 +47,8 @@
     "printer":{
       "nozzle_temp":255,
       "bed_material":"PEI",
-      "bed_temp":100
+      "bed_temp":100,
+      "fan":"no"
     },
     "price_per_kg":20.00,
     "quality":{
