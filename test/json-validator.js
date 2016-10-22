@@ -174,7 +174,7 @@ var validate = validator({
     }
 });
 
-var json = JSON.parse(fs.readFileSync('./content/data.json'));
+var json = JSON.parse(fs.readFileSync('./assets/data.json'));
 
 if(validate(json)){
     console.log("JSON test passed!");
