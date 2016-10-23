@@ -25838,7 +25838,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8", __vue__options__)
+    hotAPI.reload("data-v-8", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":13,"../partials/FilamentFooter.vue":14,"../partials/FilamentHeader.vue":15,"vue":6,"vue-hot-reload-api":4}],9:[function(require,module,exports){
@@ -25984,7 +25984,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7", __vue__options__)
+    hotAPI.reload("data-v-7", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":12,"./Filament.vue":8,"vue":6,"vue-hot-reload-api":4}],10:[function(require,module,exports){
@@ -26091,7 +26091,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],13:[function(require,module,exports){
@@ -26108,7 +26108,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(0)," ",_h('td',[_h('b',[_s(item.price_per_kg)+" €"])])])," ",_h('tr',[_m(1)," ",_h('td',[_h('b',[_s(item.ease_of_use)+"/5"])])])," ",_h('tr',[_m(2)," ",_h('td',[_h('b',[_s(item.strength.misc.temperature_stability)+"/5"])])])])," ",_h('table',{staticClass:"table"},[_h('tr',[_m(3)," ",_h('td',[_h('b',[_s(item.printer.nozzle_temp)+" °C"])])])," ",_h('tr',[_m(4)," ",_h('td',[_h('b',[_s(item.printer.bed_temp)+" °C"])])])," ",_h('tr',[_m(5)," ",_h('td',[_h('b',[_s(item.printer.bed_material)])])])," ",_h('tr',[_m(6)," ",_h('td',[_h('b',[_s(item.printer.fan)])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(7)," ",_h('td',[_s(item.quality.threedbenchy)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(8)," ",_h('td',[_s(item.quality.overhangs)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(9)," ",_h('td',[_s(item.quality.details)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(10)," ",_h('td',[_s(item.quality.bridges)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(11)," ",_h('td',[_s(item.quality.warp)])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(12)," ",_h('td',[_h('b',[_s(item.quality.rated)+"/20"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(13)," ",_h('td',[_s(item.strength.bend.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(14)," ",_h('td',[_s(item.strength.bend.adhesion)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(15)," ",_h('td',[_s(item.strength.pull.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(16)," ",_h('td',[_s(item.strength.pull.adhesion)+" kg"])])," ",_h('tr',[_m(17)," ",_h('td',[_h('b',[_s(item.strength.misc.bendflex)+" mm"])])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(18)," ",_h('td',[_h('b',[_s(item.strength.rated)+" kg"])])])])])])}}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(0)," ",_h('td',[_h('b',[_s(item.price_per_kg?item.price_per_kg+' €':'n/a')])])])," ",_h('tr',[_m(1)," ",_h('td',[_h('b',[_s(item.ease_of_use)+"/5"])])])," ",_h('tr',[_m(2)," ",_h('td',[_h('b',[_s(item.strength.misc.temperature_stability)+"/5"])])])])," ",_h('table',{staticClass:"table"},[_h('tr',[_m(3)," ",_h('td',[_h('b',[_s(item.printer.nozzle_temp)+" °C"])])])," ",_h('tr',[_m(4)," ",_h('td',[_h('b',[_s(item.printer.bed_temp)+" °C"])])])," ",_h('tr',[_m(5)," ",_h('td',[_h('b',[_s(item.printer.bed_material)])])])," ",_h('tr',[_m(6)," ",_h('td',[_h('b',[_s(item.printer.fan)])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(7)," ",_h('td',[_s(item.quality.threedbenchy)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(8)," ",_h('td',[_s(item.quality.overhangs)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(9)," ",_h('td',[_s(item.quality.details)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(10)," ",_h('td',[_s(item.quality.bridges)+"/5"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(11)," ",_h('td',[_s(item.quality.warp)])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(12)," ",_h('td',[_h('b',[_s(item.quality.rated)+"/20"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',{staticClass:"is-hidden-mobile"},[_m(13)," ",_h('td',[_s(item.strength.bend.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(14)," ",_h('td',[_s(item.strength.bend.adhesion)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(15)," ",_h('td',[_s(item.strength.pull.strength)+" kg"])])," ",_h('tr',{staticClass:"is-hidden-mobile"},[_m(16)," ",_h('td',[_s(item.strength.pull.adhesion)+" kg"])])," ",_h('tr',[_m(17)," ",_h('td',[_h('b',[_s(item.strength.misc.bendflex)+" mm"])])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(18)," ",_h('td',[_h('b',[_s(item.strength.rated)+" kg"])])])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _h('td',["Retail Price per kg"])}},function(){with(this){return _h('td',["Ease of use"])}},function(){with(this){return _h('td',["Temperature stability"])}},function(){with(this){return _h('td',["Nozzle Temperature"])}},function(){with(this){return _h('td',["Print Bed Temperature"])}},function(){with(this){return _h('td',["Print Bed Material"])}},function(){with(this){return _h('td',["Cooling Fan"])}},function(){with(this){return _h('td',["3D Benchy Score"])}},function(){with(this){return _h('td',["Overhangs"])}},function(){with(this){return _h('td',["Fine Details"])}},function(){with(this){return _h('td',["Bridges"])}},function(){with(this){return _h('td',["Warp"])}},function(){with(this){return _h('td',["Overall Quality"])}},function(){with(this){return _h('td',["Bend - Layer strength"])}},function(){with(this){return _h('td',["Bend - Layer adhesion"])}},function(){with(this){return _h('td',["Pull - Layer strength"])}},function(){with(this){return _h('td',["Pull - Layer adhesion"])}},function(){with(this){return _h('td',["Bend flex at 1kg load"])}},function(){with(this){return _h('td',["Rated Strength"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -26117,7 +26117,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.reload("data-v-11", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],14:[function(require,module,exports){
@@ -26147,7 +26147,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-12", __vue__options__)
+    hotAPI.reload("data-v-12", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}],15:[function(require,module,exports){
@@ -26173,7 +26173,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-10", __vue__options__)
+    hotAPI.reload("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],16:[function(require,module,exports){
@@ -26188,7 +26188,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6", __vue__options__)
+    hotAPI.reload("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],17:[function(require,module,exports){
@@ -26201,9 +26201,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],18:[function(require,module,exports){
@@ -26238,7 +26238,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5", __vue__options__)
+    hotAPI.reload("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}],19:[function(require,module,exports){
@@ -26268,7 +26268,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1", __vue__options__)
+    hotAPI.reload("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":9,"vue":6,"vue-hot-reload-api":4}],20:[function(require,module,exports){
@@ -26312,9 +26312,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":9,"../mixins/ManagesFavourites.js":11,"vue":6,"vue-hot-reload-api":4}],21:[function(require,module,exports){
@@ -26329,7 +26329,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.reload("data-v-3", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":4}]},{},[10]);

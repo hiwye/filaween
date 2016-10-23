@@ -54,7 +54,7 @@ var validate = validator({
             price_per_kg: {
                 required: true,
                 description: "Filament price per kilogram",
-                type: "number"
+                type: ["number","null"]
             },
             quality: {
                 required: true,

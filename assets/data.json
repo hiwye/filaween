@@ -215,7 +215,7 @@
       "bed_temp":55,
       "fan":"full"
     },
-    "price_per_kg":35,
+    "price_per_kg":null,
     "quality":{
       "rated":13,
       "threedbenchy":4,

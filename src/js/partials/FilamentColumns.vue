@@ -4,7 +4,7 @@
             <table class="table">
                 <tr>
                     <td>Retail Price per kg</td>
-                    <td><b>{{item.price_per_kg}} €</b></td>
+                    <td><b>{{item.price_per_kg?item.price_per_kg+' €':'n/a'}}</b></td>
                 </tr>
                 <tr>
                     <td>Ease of use</td>
