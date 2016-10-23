@@ -16,8 +16,8 @@
                           <span class="select is-fullwidth">
                             <select v-model="sort_mode">
                               <option value="default">Default</option>
-                              <option value="alphabet">Alphabetical</option>
-                              <option value="revchron">Chronological</option>
+                              <option value="alphabet">Alphabetical [A-Z]</option>
+                              <option value="revchron">Chronological [Newest-Oldest]</option>
                             </select>
                           </span>
                         </p>
