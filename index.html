@@ -38,8 +38,8 @@
 </noscript>
 <div class="wrap" id="app">
     <page-header></page-header>
-    <page-nav v-bind:view="view" v-on:view="changeView"></page-nav>
-    <div class="view" v-bind:is="view+'-view'" :filaments="filaments"></div>
+    <page-nav :view="view" @view="changeView"></page-nav>
+    <div class="view" :is="view+'-view'" :filaments="filaments"></div>
     <page-footer></page-footer>
 </div>
 <script>

@@ -2,7 +2,7 @@
     <nav class="level">
         <div class="level-left">
             <p class="level-item">
-                <a class="button" v-bind:class="{'is-danger':isFavourite(item.id)}" v-on:click="toggleFavourite(item.id)">
+                <a class="button" :class="{'is-danger':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
                     <i class="fa fa-heart"></i>
                 </a>
             </p>

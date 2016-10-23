@@ -3,7 +3,7 @@
         <div class="container">
             <div class="tabs is-centered">
                 <ul class="is-left">
-                    <li v-on:click="$emit('view',key)" v-bind:class="{'is-active':view==key}" v-for="(item, key) in items"><a>{{item}}</a></li>
+                    <li @click="$emit('view',key)" :class="{'is-active':view==key}" v-for="(item, key) in items"><a>{{item}}</a></li>
                 </ul>
             </div>
         </div>

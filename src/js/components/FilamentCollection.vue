@@ -5,10 +5,10 @@
                 <input v-model="search" type="text" class="input is-large is-expanded" placeholder="Search filaments" autofocus>
                 <button
                         class="button is-large"
-                        v-bind:class="{'is-success':show_filters}"
-                        v-on:click="toggleFilterBox"
+                        :class="{'is-success':show_filters}"
+                        @click="toggleFilterBox"
                         :title="show_filters?'Clear filters':'Filter results'">
-                    <i class="fa" v-bind:class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
+                    <i class="fa" :class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
                 </button>
             </div>
 
