@@ -2,7 +2,7 @@
     <section class="section">
         <div class="container">
             <div class="control has-addons" v-show="searchable == true">
-                <input v-model="search" type="text" class="input is-large is-expanded" placeholder="Search" autofocus>
+                <input v-model="search" type="text" class="input is-large is-expanded" placeholder="Search filaments" autofocus>
                 <button class="button is-large" v-bind:class="{'is-success':show_filters}" v-on:click="toggleFilterBox">
                     <i class="fa" v-bind:class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
                 </button>
