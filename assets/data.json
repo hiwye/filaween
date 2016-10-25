@@ -286,5 +286,46 @@
       "purchase":null
     },
     "id":"colido-cartridge-pla"
+  },
+  {
+    "material":"PETG",
+    "brand":"Ridgid.Ink",
+    "product":"Copolyester",
+    "printer":{
+      "nozzle_temp":235,
+      "bed_material":"Glue Stick",
+      "bed_temp":75,
+      "fan":"20% fixed"
+    },
+    "price_per_kg":36,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":3,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":55.5,
+      "bend":{
+        "strength":2.5,
+        "adhesion":1.75
+      },
+      "pull":{
+        "strength":25,
+        "adhesion":4.25
+      },
+      "misc":{
+        "bendflex":24,
+        "temperature_stability":3
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=J3W_Y-fk9AQ",
+      "purchase":null
+    },
+    "id":"ridgidink-copolyester-petg"
   }
 ]
