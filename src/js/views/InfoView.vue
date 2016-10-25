@@ -55,6 +55,13 @@
                 <p>
                     <a href="https://github.com/hiwye/filaween">Source code on GitHub</a>
                 </p>
+
+                <h2 class="title">License</h2>
+                <p>
+                    This project is licensed under the terms of the
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license,
+                    alike the source material. The source data has not been modified from it's original form.
+                </p>
             </div>
         </div>
     </section>
