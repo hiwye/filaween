@@ -26179,8 +26179,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',[_m(0)," ",_h('a',{staticClass:"button is-fullwidth",class:{'is-danger':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(1)])," ",_m(2)," ",_h('a',{staticClass:"button is-dark is-fullwidth",attrs:{"href":item.links.video,"data-lity":""}},["\n        Watch video\n    "])," ",_m(3)," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button is-info is-fullwidth",attrs:{"href":item.links.purchase,"target":"_blank"}},["\n        Purchase online\n    "])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('br')}},function(){with(this){return _h('i',{staticClass:"fa fa-heart"})}},function(){with(this){return _h('br')}},function(){with(this){return _h('br')}}]
+__vue__options__.render = function(){with(this){return _h('div',[_m(0)," ",_h('a',{staticClass:"button is-fullwidth",class:{'is-info':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(1),"   Star\n    "])," ",_m(2)," ",_h('a',{staticClass:"button is-dark is-fullwidth",attrs:{"href":item.links.video,"data-lity":""}},["\n        Watch video\n    "])," ",_m(3)," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button is-info is-fullwidth",attrs:{"href":item.links.purchase,"target":"_blank"}},["\n        Purchase online\n    "])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('br')}},function(){with(this){return _h('i',{staticClass:"fa fa-star"})}},function(){with(this){return _h('br')}},function(){with(this){return _h('br')}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -26242,9 +26242,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":7,"vue-hot-reload-api":5}],19:[function(require,module,exports){
@@ -26261,7 +26261,7 @@ exports.default = {
             items: {
                 home: "Home",
                 all: "Browse",
-                favourites: "Favourites",
+                favourites: "My Stars",
                 info: "Info & Credits"
             }
         };
@@ -26308,9 +26308,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":10,"vue":7,"vue-hot-reload-api":5}],21:[function(require,module,exports){
@@ -26384,9 +26384,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":10,"vue":7,"vue-hot-reload-api":5}],23:[function(require,module,exports){
@@ -26399,9 +26399,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":7,"vue-hot-reload-api":5}]},{},[11]);

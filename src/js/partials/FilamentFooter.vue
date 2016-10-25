@@ -1,8 +1,8 @@
 <template>
     <div>
         <br>
-        <a class="button is-fullwidth" :class="{'is-danger':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
-            <i class="fa fa-heart"></i>
+        <a class="button is-fullwidth" :class="{'is-info':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
+            <i class="fa fa-star"></i> &nbsp; Star
         </a>
         <br>
         <a class="button is-dark is-fullwidth" :href="item.links.video" data-lity>

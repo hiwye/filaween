@@ -17,7 +17,7 @@
                 items: {
                     home: "Home",
                     all: "Browse",
-                    favourites: "Favourites",
+                    favourites: "My Stars",
                     info: "Info & Credits"
                 }
             }
