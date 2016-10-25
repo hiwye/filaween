@@ -7,7 +7,7 @@
                 </h1>
             </div>
         </div>
-        <filament-collection searchable="1" featured="1" :items="filaments"></filament-collection>
+        <filament-collection searchable="1" filterable="0" featured="1" :items="filaments"></filament-collection>
     </section>
 </template>
 <script>

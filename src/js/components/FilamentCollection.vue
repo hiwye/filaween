@@ -64,7 +64,7 @@
 
         <filament v-for="item in filtered" :item="item"></filament>
 
-        <collection-empty v-show="filtered.length == 0 && browseable"></collection-empty>
+        <collection-empty v-show="(browseable && filtered.length == 0) || (!browseable && filtered.length == 0 && search.length != 0)"></collection-empty>
     </div>
 </template>
 <script>
