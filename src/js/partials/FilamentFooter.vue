@@ -1,19 +1,18 @@
 <template>
-    <nav class="level">
-        <div class="level-left">
-            <p class="level-item">
-                <a class="button" :class="{'is-danger':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
-                    <i class="fa fa-heart"></i>
-                </a>
-            </p>
-        </div>
-        <div class="level-right">
-            <p class="level-item">
-                <a class="button is-dark" :href="item.links.video" data-lity>Watch video</a>
-                <a class="button is-info" v-show="item.links.purchase" :href="item.links.purchase" target="_blank">Purchase online</a>
-            </p>
-        </div>
-    </nav>
+    <div>
+        <br>
+        <a class="button is-fullwidth" :class="{'is-danger':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
+            <i class="fa fa-heart"></i>
+        </a>
+        <br>
+        <a class="button is-dark is-fullwidth" :href="item.links.video" data-lity>
+            Watch video
+        </a>
+        <br>
+        <a class="button is-info is-fullwidth" :href="item.links.purchase" target="_blank" v-show="item.links.purchase">
+            Purchase online
+        </a>
+    </div>
 </template>
 <script>
     var ManagesFavourites = require('../mixins/ManagesFavourites.js');

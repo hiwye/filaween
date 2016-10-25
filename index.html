@@ -41,7 +41,7 @@
 <div class="wrap" id="app">
     <page-header></page-header>
     <page-nav :view="view" @view="changeView"></page-nav>
-    <div class="view" :is="view+'-view'" :filaments="filaments"></div>
+    <div class="view" :is="view+'-view'" :filaments="filaments" @view="changeView"></div>
     <page-footer></page-footer>
 </div>
 <script>

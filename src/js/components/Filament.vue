@@ -7,13 +7,13 @@
                         <img :src="'./assets/filament-images/'+item.id+'.png'" :alt="'Image of '+item.brand+' '+item.product">
                     </a>
                 </figure>
+                <filament-footer :item="item"></filament-footer>
             </div>
             <div class="media-content">
                 <div class="content">
                     <filament-header :item="item"></filament-header>
                     <filament-columns :item="item"></filament-columns>
                 </div>
-                <filament-footer :item="item"></filament-footer>
             </div>
         </article>
     </div>

@@ -1,5 +1,7 @@
 <template>
-    <filament-collection searchable="0" featured="0" :items="favourites"></filament-collection>
+    <section class="section">
+        <filament-collection searchable="0" filterable="0" browseable="1" featured="0" :items="favourites"></filament-collection>
+    </section>
 </template>
 <script>
     var FilamentCollection = require('../components/FilamentCollection.vue');

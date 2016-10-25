@@ -2667,7 +2667,7 @@ lodash@~4.9.0:
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.9.0.tgz#4c20d742f03ce85dc700e0dd7ab9bcab85e6fc14"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.2.0.tgz#69a65aad3de542cf4ee0f4fe74e8e33c709ccb0f"
   dependencies:
@@ -4254,6 +4254,12 @@ vm-browserify@~0.0.1:
 vue:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.0.3.tgz#3f7698f83d6ad1f0e35955447901672876c63fde"
+
+vue-focus:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-focus/-/vue-focus-2.0.0.tgz#31dbf7a91a0f9c3d752354d6c63fe2d62cb3b37a"
+  dependencies:
+    loose-envify "^1.2.0"
 
 vue-hot-reload-api@^2.0.1:
   version "2.0.6"

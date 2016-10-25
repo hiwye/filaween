@@ -8,6 +8,7 @@ window.Zepto = require('jquery');
 window.Lity = require('lity');
 
 // Component Includes
+var HomeView = require('./views/HomeView.vue');
 var AllView = require('./views/AllView.vue');
 var FavouritesView = require('./views/FavouritesView.vue');
 var InfoView = require('./views/InfoView.vue');
@@ -18,9 +19,9 @@ var PageFooter = require('./partials/PageFooter.vue');
 // Vue Setup
 var vm = new Vue({
     el: '#app',
-    components: {AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
+    components: {HomeView, AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
     data: {
-        view: 'all',
+        view: 'home',
         filaments: []
     },
     methods: {

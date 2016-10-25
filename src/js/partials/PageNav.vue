@@ -15,7 +15,8 @@
         data () {
             return {
                 items: {
-                    all: "All",
+                    home: "Home",
+                    all: "Browse",
                     favourites: "Favourites",
                     info: "Info & Credits"
                 }

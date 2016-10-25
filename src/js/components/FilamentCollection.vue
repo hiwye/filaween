@@ -1,75 +1,80 @@
 <template>
-    <section class="section">
-        <div class="container">
-            <div class="control has-addons" v-show="searchable == true">
-                <input v-model="search" type="text" class="input is-large is-expanded" placeholder="Search filaments" autofocus>
-                <button
-                        class="button is-large"
-                        :class="{'is-success':show_filters}"
-                        @click="toggleFilterBox"
-                        :title="show_filters?'Clear filters':'Filter results'">
-                    <i class="fa" :class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
-                </button>
-            </div>
+    <div class="container">
+        <div class="control has-addons" v-show="searchable == true">
+            <input v-model="search"
+                   type="text"
+                   class="input is-large is-expanded"
+                   placeholder="Enter a brand, product, or material"
+                   v-focus="true">
+            <button
+                    class="button is-large"
+                    :class="{'is-success':show_filters}"
+                    @click="toggleFilterBox"
+                    v-show="filterable"
+                    :title="show_filters?'Clear filters':'Filter results'">
+                <i class="fa" :class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
+            </button>
+        </div>
 
-            <div class="box is-success" v-show="show_filters">
-                <div class="columns">
-                    <div class="column">
-                        <b>Sorting</b>
-                        <p class="control">
-                          <span class="select is-fullwidth">
-                            <select v-model="sort_mode">
-                              <option value="default">Default</option>
-                              <option value="alphabet">Alphabetical [A-Z]</option>
-                              <option value="revchron">Chronological [Newest-Oldest]</option>
-                            </select>
-                          </span>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <b>Material</b>
-                        <p class="control">
-                          <span class="select is-fullwidth">
-                            <select v-model="filter_material">
-                              <option value="">Any</option>
-                              <option :value="option" v-for="option in materialOptions">{{option}}</option>
-                            </select>
-                          </span>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <b>Maximum Price</b> [€ per kg]
-                        <p class="control">
-                            <input type="number" class="input" v-model="filter_price" min="0" max="200" step="5">
-                        </p>
-                    </div>
-                    <div class="column">
-                        <b>Minimum Overall Quality</b> [0-20]
-                        <p class="control">
-                            <input type="number" class="input" v-model="filter_quality" min="0" max="20">
-                        </p>
-                    </div>
-                    <div class="column">
-                        <b>Minimum Rated Strength</b> [kg]
-                        <p class="control">
-                            <input type="number" class="input" v-model="filter_strength" min="0" max="200" step="10">
-                        </p>
-                    </div>
+        <div class="box is-success" v-show="show_filters && filterable">
+            <div class="columns">
+                <div class="column">
+                    <b>Sorting</b>
+                    <p class="control">
+                      <span class="select is-fullwidth">
+                        <select v-model="sort_mode">
+                          <option value="default">Default</option>
+                          <option value="alphabet">Alphabetical [A-Z]</option>
+                          <option value="revchron">Chronological [Newest-Oldest]</option>
+                        </select>
+                      </span>
+                    </p>
+                </div>
+                <div class="column">
+                    <b>Material</b>
+                    <p class="control">
+                      <span class="select is-fullwidth">
+                        <select v-model="filter_material">
+                          <option value="">Any</option>
+                          <option :value="option" v-for="option in materialOptions">{{option}}</option>
+                        </select>
+                      </span>
+                    </p>
+                </div>
+                <div class="column">
+                    <b>Maximum Price</b> [€ per kg]
+                    <p class="control">
+                        <input type="number" class="input" v-model="filter_price" min="0" max="200" step="5">
+                    </p>
+                </div>
+                <div class="column">
+                    <b>Minimum Overall Quality</b> [0-20]
+                    <p class="control">
+                        <input type="number" class="input" v-model="filter_quality" min="0" max="20">
+                    </p>
+                </div>
+                <div class="column">
+                    <b>Minimum Rated Strength</b> [kg]
+                    <p class="control">
+                        <input type="number" class="input" v-model="filter_strength" min="0" max="200" step="10">
+                    </p>
                 </div>
             </div>
-
-            <filament v-for="item in filtered" :item="item"></filament>
-
-            <collection-empty v-show="filtered.length == 0"></collection-empty>
         </div>
-    </section>
+
+        <filament v-for="item in filtered" :item="item"></filament>
+
+        <collection-empty v-show="filtered.length == 0 && browseable"></collection-empty>
+    </div>
 </template>
 <script>
     var Filament = require('./Filament.vue');
     var CollectionEmpty = require('../partials/CollectionEmpty.vue');
+    import {focus} from 'vue-focus';
     export default {
-        props: ['items','searchable', 'featured'],
+        props: ['items','searchable', 'filterable', 'browseable', 'featured'],
         components: {Filament, CollectionEmpty},
+        directives: {focus},
         data () {
             return {
                 search: '',
@@ -90,7 +95,11 @@
 
                 //SEARCH
                 if(this.search === "") {
-                    searched = searchable;
+                    if(this.browseable){
+                        searched = searchable;
+                    }else{
+                        searched = [];
+                    }
                 }else {
                     var searchQuery = this.search.toLowerCase();
                     searchable.forEach(function (item) {

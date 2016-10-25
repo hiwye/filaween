@@ -4093,3 +4093,7 @@ tr.is-highlighted {
 
 [v-cloak] {
   display: none; }
+
+img.logo {
+  max-width: 70%;
+  width: 20px; }

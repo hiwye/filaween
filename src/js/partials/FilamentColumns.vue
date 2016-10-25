@@ -36,7 +36,6 @@
             </table>
         </div>
 
-
         <div class="column">
             <table class="table">
                 <tr class="is-hidden-mobile">
