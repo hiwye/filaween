@@ -245,5 +245,46 @@
       "purchase":null
     },
     "id":"protopasta-mattefiber-pla"
+  },
+  {
+    "material":"PLA",
+    "brand":"CoLiDo",
+    "product":"Cartridge",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":26,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":3,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":56,
+      "bend":{
+        "strength":5.25,
+        "adhesion":2
+      },
+      "pull":{
+        "strength":11.25,
+        "adhesion":8
+      },
+      "misc":{
+        "bendflex":12,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=72KpI1wxpWw",
+      "purchase":null
+    },
+    "id":"colido-cartridge-pla"
   }
 ]
