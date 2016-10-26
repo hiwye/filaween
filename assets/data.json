@@ -327,5 +327,46 @@
       "purchase":null
     },
     "id":"ridgidink-copolyester-petg"
+  },
+  {
+    "material":"PLA composite",
+    "brand":"Protopasta",
+    "product":"HTPLA-CF",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":86,
+    "quality":{
+      "rated":15,
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":4,
+      "bridges":1,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":29.25,
+      "bend":{
+        "strength":3.25,
+        "adhesion":0
+      },
+      "pull":{
+        "strength":9.75,
+        "adhesion":3.25
+      },
+      "misc":{
+        "bendflex":10,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":2,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=-Z3Nq4hwKgs",
+      "purchase":null
+    },
+    "id":"protopasta-htplacf-pla"
   }
 ]
