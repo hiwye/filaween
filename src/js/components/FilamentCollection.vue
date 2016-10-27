@@ -203,8 +203,6 @@
             },
 
             featuredSorter(items){
-                items = this.propSorter(items, 'id');
-
                 if(this.search !== '' || this.featured == false)
                     return items;
 

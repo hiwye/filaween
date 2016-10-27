@@ -28678,8 +28678,6 @@ exports.default = {
             return items.reverse();
         },
         featuredSorter: function featuredSorter(items) {
-            items = this.propSorter(items, 'id');
-
             if (this.search !== '' || this.featured == false) return items;
 
             var featured = items.filter(function (element, index) {
@@ -29035,9 +29033,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29078,9 +29076,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29124,9 +29122,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29154,9 +29152,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
