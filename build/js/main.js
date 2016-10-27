@@ -28708,7 +28708,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28748,7 +28748,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 // Configuration
 var DATA_PATH = './assets/data.json';
-var GEO_API_URL = 'http://ip-api.com/json/?fields=countryCode';
+var GEO_API_URL = 'https://freegeoip.net/json/';
 
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
@@ -28789,7 +28789,7 @@ var vm = new Vue({
                 _this.filaments = data.data;
             });
             this.$http.jsonp(GEO_API_URL).then(function (data) {
-                _this.countryCode = data.data.countryCode;
+                _this.countryCode = data.data.country_code;
             });
         }
     }

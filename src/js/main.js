@@ -1,6 +1,6 @@
 // Configuration
 const DATA_PATH = './assets/data.json';
-const GEO_API_URL = 'http://ip-api.com/json/?fields=countryCode';
+const GEO_API_URL = 'https://freegeoip.net/json/';
 
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
@@ -46,7 +46,7 @@ var vm = new Vue({
                 this.filaments = data.data;
             });
             this.$http.jsonp(GEO_API_URL).then((data)=> {
-                this.countryCode = data.data.countryCode;
+                this.countryCode = data.data.country_code;
             });
         }
     }
