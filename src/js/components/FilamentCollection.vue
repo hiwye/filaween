@@ -79,7 +79,7 @@
         data () {
             return {
                 search: '',
-                show_filters: false,
+                show_filters: this.browseable,
                 filter_material: '',
                 filter_price: 200,
                 filter_quality: 0,

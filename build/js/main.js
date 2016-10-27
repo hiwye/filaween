@@ -28575,7 +28575,7 @@ exports.default = {
     data: function data() {
         return {
             search: '',
-            show_filters: false,
+            show_filters: this.browseable,
             filter_material: '',
             filter_price: 200,
             filter_quality: 0,
@@ -28710,7 +28710,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
