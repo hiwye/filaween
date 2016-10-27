@@ -42,6 +42,10 @@
                         <a href="mailto:sebastian@sebastianwalker.org">sebastian@sebastianwalker.org</a>.
                     </i>
                 </p>
+                <p>
+                    There are currently {{filaments.length}} filaments on the site.
+                    Stay tuned as more are added almost daily!
+                </p>
 
                 <h2 class="title">Techie Stuff</h2>
                 <p>
@@ -66,3 +70,8 @@
         </div>
     </section>
 </template>
+<script>
+    export default {
+        props: ['filaments']
+    }
+</script>
