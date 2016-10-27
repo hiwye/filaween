@@ -41,7 +41,9 @@
 <div class="wrap" id="app">
     <page-header></page-header>
     <page-nav></page-nav>
-    <router-view :filaments="filaments"></router-view>
+    <section class="section">
+        <router-view :filaments="filaments"></router-view>
+    </section>
     <page-footer></page-footer>
 </div>
 <script>

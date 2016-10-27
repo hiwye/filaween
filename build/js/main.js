@@ -28553,7 +28553,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28710,7 +28710,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28742,7 +28742,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.reload("data-v-12", __vue__options__)
+    hotAPI.rerender("data-v-12", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],14:[function(require,module,exports){
@@ -28854,7 +28854,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.reload("data-v-10", __vue__options__)
+    hotAPI.rerender("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28878,9 +28878,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-13", __vue__options__)
+    hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.reload("data-v-13", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28910,7 +28910,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.reload("data-v-15", __vue__options__)
+    hotAPI.rerender("data-v-15", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],19:[function(require,module,exports){
@@ -28934,9 +28934,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14", __vue__options__)
+    hotAPI.createRecord("data-v-13", __vue__options__)
   } else {
-    hotAPI.reload("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-13", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],20:[function(require,module,exports){
@@ -28951,7 +28951,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],21:[function(require,module,exports){
@@ -28966,7 +28966,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6", __vue__options__)
+    hotAPI.rerender("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],22:[function(require,module,exports){
@@ -29002,7 +29002,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7", __vue__options__)
+    hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29023,16 +29023,16 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('filament-collection',{attrs:{"searchable":"1","filterable":"1","browseable":"1","featured":"1","items":filaments}})])}}
+__vue__options__.render = function(){with(this){return _h('filament-collection',{attrs:{"searchable":"1","filterable":"1","browseable":"1","featured":"1","items":filaments}})}}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29066,16 +29066,16 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"control"},[_h('a',{staticClass:"button",on:{"click":function($event){$router.go(-1)}}},["\n                Go back\n            "])])," ",(filament)?_h('filament',{attrs:{"item":filament}}):_h('collection-empty')," "])])}}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"container"},[_h('div',{staticClass:"control"},[_h('a',{staticClass:"button",on:{"click":function($event){$router.go(-1)}}},["\n            Go back\n        "])])," ",(filament)?_h('filament',{attrs:{"item":filament}}):_h('collection-empty')," "])}}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29112,7 +29112,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('filament-collection',{attrs:{"searchable":"0","filterable":"0","browseable":"1","featured":"0","items":favourites}})])}}
+__vue__options__.render = function(){with(this){return _h('filament-collection',{attrs:{"searchable":"0","filterable":"0","browseable":"1","featured":"0","items":favourites}})}}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -29121,7 +29121,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29142,16 +29142,16 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('h1',{staticClass:"title is-2"},["\n                Search for filaments or just ",_h('router-link',{attrs:{"to":"/browse"}},["browse"]),".\n            "])])])," ",_h('filament-collection',{attrs:{"searchable":"1","filterable":"0","featured":"1","items":filaments}})])}}
+__vue__options__.render = function(){with(this){return _h('div',[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('h1',{staticClass:"title is-2"},["\n                Search for filaments or just ",_h('router-link',{attrs:{"to":"/browse"}},["browse"]),".\n            "])])])," ",_h('filament-collection',{attrs:{"searchable":"1","filterable":"0","featured":"1","items":filaments}})])}}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
@@ -29168,8 +29168,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('section',{staticClass:"section"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_m(0)," ",_m(1)," ",_m(2)," ",_m(3)," ",_m(4)," ",_m(5)," ",_m(6)," ",_m(7)," ",_m(8)," ",_h('p',["\n                There are currently "+_s(filaments.length)+" filaments on the site.\n                Stay tuned as more are added almost daily!\n            "])," ",_m(9)," ",_m(10)])])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',{staticClass:"title"},["Introduction"])}},function(){with(this){return _h('p',["\n                This site allows you to compare result data of a filament analysis\n                series conducted by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," on his\n                ",_h('a',{attrs:{"href":"https://www.youtube.com/user/ThomasSanladerer"}},["YouTube channel"]),".",_h('br'),"\n\n                You may watch his introduction to the series using\n                ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=YcQHbaVeD7I"}},["this link"]),".\n            "])}},function(){with(this){return _h('h2',{staticClass:"title"},["Credits"])}},function(){with(this){return _h('p',["\n                The site is a joint effort by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," and\n                ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),".\n            "])}},function(){with(this){return _h('p',["\n                Thomas Sanladerer — Filament Testing and Analysis",_h('br'),"\n                Sebastian Walker — Site Maintenance and Development\n            "])}},function(){with(this){return _h('p',["\n                Logo made by ",_h('a',{attrs:{"href":"http://www.freepik.com","title":"Freepik"}},["Freepik"])," from\n                ",_h('a',{attrs:{"href":"http://www.flaticon.com","title":"Flaticon"}},["www.flaticon.com"])," is licensed by\n                ",_h('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},["\n                    CC 3.0 BY\n                "])])}},function(){with(this){return _h('h2',{staticClass:"title"},["Data"])}},function(){with(this){return _h('p',["\n                You may access the JSON file this site reads from using ",_h('a',{attrs:{"href":"./assets/data.json"}},["this link"]),".\n                Thomas has also put together a\n                ",_h('a',{attrs:{"href":"https://docs.google.com/spreadsheets/d/1j9QazgoocuzHxg6qUXevq3dpAmmT2E87089FX6gRgWU/edit#gid=0"}},["Google Docs"]),"\n                sheet with the complete data.\n            "])}},function(){with(this){return _h('p',[_h('i',["\n                    If you encounter any incorrect data, please shoot Sebastian an email at\n                    ",_h('a',{attrs:{"href":"mailto:sebastian@sebastianwalker.org"}},["sebastian@sebastianwalker.org"]),".\n                "])])}},function(){with(this){return _h('h2',{staticClass:"title"},["License"])}},function(){with(this){return _h('p',["\n                This work is licensed under the terms of the\n                ",_h('a',{attrs:{"href":"https://creativecommons.org/licenses/by-sa/4.0/"}},["CC BY-SA 4.0"])," license,\n                alike the source material. The source data has not been modified from it's original form.\n            "])}}]
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_m(0)," ",_m(1)," ",_m(2)," ",_m(3)," ",_m(4)," ",_m(5)," ",_m(6)," ",_m(7)," ",_m(8)," ",_h('p',["\n            There are currently "+_s(filaments.length)+" filaments on the site.\n            Stay tuned as more are added almost daily!\n        "])," ",_m(9)," ",_m(10)])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',{staticClass:"title"},["Introduction"])}},function(){with(this){return _h('p',["\n            This site allows you to compare result data of a filament analysis\n            series conducted by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," on his\n            ",_h('a',{attrs:{"href":"https://www.youtube.com/user/ThomasSanladerer"}},["YouTube channel"]),".",_h('br'),"\n\n            You may watch his introduction to the series using\n            ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=YcQHbaVeD7I"}},["this link"]),".\n        "])}},function(){with(this){return _h('h2',{staticClass:"title"},["Credits"])}},function(){with(this){return _h('p',["\n            The site is a joint effort by ",_h('a',{attrs:{"href":"http://toms3d.org/"}},["Thomas Sanladerer"])," and\n            ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),".\n        "])}},function(){with(this){return _h('p',["\n            Thomas Sanladerer — Filament Testing and Analysis",_h('br'),"\n            Sebastian Walker — Site Maintenance and Development\n        "])}},function(){with(this){return _h('p',["\n            Logo made by ",_h('a',{attrs:{"href":"http://www.freepik.com","title":"Freepik"}},["Freepik"])," from\n            ",_h('a',{attrs:{"href":"http://www.flaticon.com","title":"Flaticon"}},["www.flaticon.com"])," is licensed by\n            ",_h('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},["\n                CC 3.0 BY\n            "])])}},function(){with(this){return _h('h2',{staticClass:"title"},["Data"])}},function(){with(this){return _h('p',["\n            You may access the JSON file this site reads from using ",_h('a',{attrs:{"href":"./assets/data.json"}},["this link"]),".\n            Thomas has also put together a\n            ",_h('a',{attrs:{"href":"https://docs.google.com/spreadsheets/d/1j9QazgoocuzHxg6qUXevq3dpAmmT2E87089FX6gRgWU/edit#gid=0"}},["Google Docs"]),"\n            sheet with the complete data.\n        "])}},function(){with(this){return _h('p',[_h('i',["\n                If you encounter any incorrect data, please shoot Sebastian an email at\n                ",_h('a',{attrs:{"href":"mailto:sebastian@sebastianwalker.org"}},["sebastian@sebastianwalker.org"]),".\n            "])])}},function(){with(this){return _h('h2',{staticClass:"title"},["License"])}},function(){with(this){return _h('p',["\n            This work is licensed under the terms of the\n            ",_h('a',{attrs:{"href":"https://creativecommons.org/licenses/by-sa/4.0/"}},["CC BY-SA 4.0"])," license,\n            alike the source material. The source data has not been modified from it's original form.\n        "])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -29177,7 +29177,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);

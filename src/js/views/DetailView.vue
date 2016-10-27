@@ -1,16 +1,14 @@
 <template>
-    <section class="section">
-        <div class="container">
-            <div class="control">
-                <a @click="$router.go(-1)" class="button">
-                    Go back
-                </a>
-            </div>
-
-            <filament :item="filament" v-if="filament"></filament>
-            <collection-empty v-else></collection-empty>
+    <div class="container">
+        <div class="control">
+            <a @click="$router.go(-1)" class="button">
+                Go back
+            </a>
         </div>
-    </section>
+
+        <filament :item="filament" v-if="filament"></filament>
+        <collection-empty v-else></collection-empty>
+    </div>
 </template>
 <script>
     var Filament = require('../components/Filament.vue');

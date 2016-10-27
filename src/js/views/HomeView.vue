@@ -1,5 +1,5 @@
 <template>
-    <section class="section">
+    <div>
         <div class="container">
             <div class="content has-text-centered">
                 <h1 class="title is-2">
@@ -8,7 +8,7 @@
             </div>
         </div>
         <filament-collection searchable="1" filterable="0" featured="1" :items="filaments"></filament-collection>
-    </section>
+    </div>
 </template>
 <script>
     var FilamentCollection = require('../components/FilamentCollection.vue');
