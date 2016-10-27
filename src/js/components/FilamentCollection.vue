@@ -101,13 +101,16 @@
                         searched = [];
                     }
                 }else {
-                    var searchQuery = this.search.toLowerCase();
-                    searchable.forEach(function (item) {
-                        var matchingString = [item.brand,item.product,item.material].join(' ').toLowerCase();
-                        if(matchingString.indexOf(searchQuery) !== -1){
-                            searched.push(item);
-                        }
+                    var fuse = new Fuse(searchable, {
+                        shouldSort: true,
+                        threshold: 0.6,
+                        location: 0,
+                        distance: 100,
+                        maxPatternLength: 32,
+                        keys: ["product", "brand", "material"]
                     });
+                    searched = fuse.search(this.search);
+                    var searchQuery = this.search.toLowerCase();
                 }
 
                 //FILTER
