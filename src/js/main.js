@@ -1,5 +1,6 @@
 // Configuration
 const DATA_PATH = './assets/data.json';
+const GEO_API_URL = 'http://ip-api.com/json/?fields=countryCode';
 
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
@@ -36,12 +37,16 @@ var vm = new Vue({
     router,
     components: {HomeView, AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
     data: {
-        filaments: []
+        filaments: [],
+        countryCode: null
     },
     methods: {
         fetch() {
             this.$http.get(DATA_PATH).then((data) => {
                 this.filaments = data.data;
+            });
+            this.$http.jsonp(GEO_API_URL).then((data)=> {
+                this.countryCode = data.data.countryCode;
             });
         }
     }

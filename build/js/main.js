@@ -28551,9 +28551,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11", __vue__options__)
+    hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-10", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28750,6 +28750,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 // Configuration
 var DATA_PATH = './assets/data.json';
+var GEO_API_URL = 'http://ip-api.com/json/?fields=countryCode';
 
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
@@ -28779,7 +28780,8 @@ var vm = new Vue({
     router: router,
     components: { HomeView: HomeView, AllView: AllView, FavouritesView: FavouritesView, InfoView: InfoView, PageHeader: PageHeader, PageNav: PageNav, PageFooter: PageFooter },
     data: {
-        filaments: []
+        filaments: [],
+        countryCode: null
     },
     methods: {
         fetch: function fetch() {
@@ -28787,6 +28789,9 @@ var vm = new Vue({
 
             this.$http.get(DATA_PATH).then(function (data) {
                 _this.filaments = data.data;
+            });
+            this.$http.jsonp(GEO_API_URL).then(function (data) {
+                _this.countryCode = data.data.countryCode;
             });
         }
     }
@@ -28852,9 +28857,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10", __vue__options__)
+    hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-10", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -29073,9 +29078,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29119,9 +29124,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
