@@ -368,5 +368,46 @@
       "purchase":null
     },
     "id":"protopasta-htplacf-pla"
+  },
+  {
+    "material":"Copolyester composite",
+    "brand":"3DPrima",
+    "product":"PrimaSelect CARBON",
+    "printer":{
+      "nozzle_temp":250,
+      "bed_material":"Glue Stick",
+      "bed_temp":50,
+      "fan":"20% fixed"
+    },
+    "price_per_kg":80,
+    "quality":{
+      "rated":11,
+      "threedbenchy":3,
+      "overhangs":4,
+      "details":3,
+      "bridges":1,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":29,
+      "bend":{
+        "strength":3.25,
+        "adhesion":0
+      },
+      "pull":{
+        "strength":11,
+        "adhesion":2.25
+      },
+      "misc":{
+        "bendflex":9,
+        "temperature_stability":3
+      }
+    },
+    "ease_of_use":2,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=7HDG7Ju9YOI",
+      "purchase":null
+    },
+    "id":"3dprima-primaselect-copolyester"
   }
 ]
