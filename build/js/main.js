@@ -28551,9 +28551,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11", __vue__options__)
+    hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.reload("data-v-11", __vue__options__)
+    hotAPI.reload("data-v-10", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28852,9 +28852,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10", __vue__options__)
+    hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-10", __vue__options__)
+    hotAPI.reload("data-v-11", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28901,8 +28901,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"control is-grouped is-vertical"},[_h('a',{staticClass:"button",class:{'is-info':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(0),"   ",_m(1)])," ",_h('router-link',{staticClass:"button is-dark",attrs:{"to":'/browse/'+item.id,"active-class":"is-hidden"}},[_m(2),"   ",_m(3)])," ",_h('a',{staticClass:"button is-dark",attrs:{"href":item.links.video,"data-lity":""}},[_m(4),"   Watch video\n    "])," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button is-dark",attrs:{"href":item.links.purchase,"target":"_blank"}},["\n        Purchase online\n    "])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('i',{staticClass:"fa fa-star"})}},function(){with(this){return _h('b',["Star"])}},function(){with(this){return _h('i',{staticClass:"fa fa-search"})}},function(){with(this){return _h('b',["Details"])}},function(){with(this){return _h('i',{staticClass:"fa fa-play"})}}]
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"control is-grouped is-vertical"},[_h('a',{staticClass:"button",class:{'is-info':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(0),"   ",_m(1)])," ",_h('router-link',{staticClass:"button",attrs:{"to":'/browse/'+item.id,"active-class":"is-hidden"}},[_m(2),"   ",_m(3)])," ",_h('a',{staticClass:"button",attrs:{"href":item.links.video,"data-lity":""}},[_m(4),"   ",_m(5)])," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button",attrs:{"href":item.links.purchase,"target":"_blank"}},[_m(6),"   ",_m(7)])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('i',{staticClass:"fa fa-star"})}},function(){with(this){return _h('b',["Star"])}},function(){with(this){return _h('i',{staticClass:"fa fa-search"})}},function(){with(this){return _h('b',["Details"])}},function(){with(this){return _h('i',{staticClass:"fa fa-play"})}},function(){with(this){return _h('b',["Watch video"])}},function(){with(this){return _h('i',{staticClass:"fa fa-shopping-cart"})}},function(){with(this){return _h('b',["Purchase online"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -28964,9 +28964,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6", __vue__options__)
+    hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6", __vue__options__)
+    hotAPI.reload("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],22:[function(require,module,exports){
@@ -29000,9 +29000,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7", __vue__options__)
+    hotAPI.reload("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29030,9 +29030,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29073,9 +29073,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.reload("data-v-6", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29119,9 +29119,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.reload("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29149,9 +29149,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.reload("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
@@ -29175,9 +29175,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);
