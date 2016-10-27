@@ -47,19 +47,6 @@
                     Stay tuned as more are added almost daily!
                 </p>
 
-                <h2 class="title">Techie Stuff</h2>
-                <p>
-                    This site is powered by the <a href="http://vuejs.org/">Vue.js</a> library, utilizing .vue components.
-                    It uses <a href="http://bulma.io/">Bulma</a> as a UI framework.<br>
-                    Favourites are stored in localStorage.
-                </p>
-                <p>
-                    Pretty simple, huh?
-                </p>
-                <p>
-                    <a href="https://github.com/hiwye/filaween">Source code on GitHub</a>
-                </p>
-
                 <h2 class="title">License</h2>
                 <p>
                     This work is licensed under the terms of the
