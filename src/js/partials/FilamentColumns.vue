@@ -38,23 +38,23 @@
 
         <div class="column">
             <table class="table">
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>3D Benchy Score</td>
                     <td>{{item.quality.threedbenchy}}/5</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Overhangs</td>
                     <td>{{item.quality.overhangs}}/5</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Fine Details</td>
                     <td>{{item.quality.details}}/5</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Bridges</td>
                     <td>{{item.quality.bridges}}/5</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Warp</td>
                     <td>{{item.quality.warp}}</td>
                 </tr>
@@ -68,19 +68,19 @@
 
         <div class="column">
             <table class="table">
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Bend - Layer strength</td>
                     <td>{{item.strength.bend.strength}} kg</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Bend - Layer adhesion</td>
                     <td>{{item.strength.bend.adhesion}} kg</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Pull - Layer strength</td>
                     <td>{{item.strength.pull.strength}} kg</td>
                 </tr>
-                <tr class="is-hidden-mobile">
+                <tr>
                     <td>Pull - Layer adhesion</td>
                     <td>{{item.strength.pull.adhesion}} kg</td>
                 </tr>

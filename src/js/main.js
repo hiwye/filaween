@@ -12,6 +12,7 @@ window.Lity = require('lity');
 var HomeView = require('./views/HomeView.vue');
 var AllView = require('./views/AllView.vue');
 var FavouritesView = require('./views/FavouritesView.vue');
+var DetailView = require('./views/DetailView.vue');
 var InfoView = require('./views/InfoView.vue');
 var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
@@ -20,6 +21,7 @@ var PageFooter = require('./partials/PageFooter.vue');
 var routes = [
     { path: '/home', component: HomeView },
     { path: '/browse', component: AllView },
+    { path: '/browse/:id', component: DetailView },
     { path: '/stars', component: FavouritesView },
     { path: '/info', component: InfoView },
     { path: '*', redirect: '/home' }

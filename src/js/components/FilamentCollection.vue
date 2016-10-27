@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-    var Filament = require('./Filament.vue');
+    var Filament = require('./FilamentSummary.vue');
     var CollectionEmpty = require('../partials/CollectionEmpty.vue');
     import {focus} from 'vue-focus';
     export default {

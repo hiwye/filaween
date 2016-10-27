@@ -4097,3 +4097,8 @@ tr.is-highlighted {
 img.logo {
   max-width: 70%;
   width: 20px; }
+
+.control.is-grouped.is-vertical {
+  flex-direction: column; }
+  .control.is-grouped.is-vertical .button {
+    margin-top: 10px; }

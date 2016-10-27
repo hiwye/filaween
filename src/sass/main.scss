@@ -25,3 +25,11 @@ img.logo {
   max-width: 70%;
   width: 20px;
 }
+
+.control.is-grouped.is-vertical {
+  flex-direction: column;
+
+  .button {
+    margin-top: 10px;
+  }
+}

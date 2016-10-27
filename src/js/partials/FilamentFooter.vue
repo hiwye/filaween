@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <br>
-        <a class="button is-fullwidth" :class="{'is-info':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
-            <i class="fa fa-star"></i> &nbsp; Star
+    <div class="control is-grouped is-vertical">
+        <a class="button" :class="{'is-info':isFavourite(item.id)}" @click="toggleFavourite(item.id)">
+            <i class="fa fa-star"></i> &nbsp; <b>Star</b>
         </a>
-        <br>
-        <a class="button is-dark is-fullwidth" :href="item.links.video" data-lity>
-            Watch video
+        <router-link class="button is-dark" :to="'/browse/'+item.id" active-class="is-hidden">
+            <i class="fa fa-search"></i> &nbsp; <b>Details</b>
+        </router-link>
+        <a class="button is-dark" :href="item.links.video" data-lity>
+            <i class="fa fa-play"></i> &nbsp; Watch video
         </a>
-        <br>
-        <a class="button is-info is-fullwidth" :href="item.links.purchase" target="_blank" v-show="item.links.purchase">
+        <a class="button is-dark" :href="item.links.purchase" target="_blank" v-show="item.links.purchase">
             Purchase online
         </a>
     </div>
