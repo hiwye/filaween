@@ -26,6 +26,7 @@
                           <option value="default">Default</option>
                           <option value="alphabet">Alphabetical [A-Z]</option>
                           <option value="revchron">Chronological [Newest-Oldest]</option>
+                          <option value="price">Price [Low-High]</option>
                         </select>
                       </span>
                     </p>
@@ -132,7 +133,10 @@
                     sorted = this.revchronSorter(filtered);
                 }else if(this.sort_mode === 'alphabet'){
                     //alphabetical
-                    sorted = this.alphabeticalSorter(filtered);
+                    sorted = this.propSorter(filtered, 'id');
+                }else if(this.sort_mode === 'price'){
+                    //by price
+                    sorted = this.propSorter(filtered, 'price_per_kg');
                 }else{
                     //default
                     sorted = this.featuredSorter(filtered);
@@ -184,11 +188,11 @@
                 this.sort_mode = 'default';
             },
 
-            alphabeticalSorter(items){
+            propSorter(items, prop){
                 return items.sort(function(a, b){
-                    if ( a.id < b.id )
+                    if ( a[prop] < b[prop] )
                         return -1;
-                    if ( a.id > b.id )
+                    if ( a[prop] > b[prop] )
                         return 1;
                     return 0;
                 });
@@ -199,7 +203,7 @@
             },
 
             featuredSorter(items){
-                items = this.alphabeticalSorter(items);
+                items = this.propSorter(items, 'id');
 
                 if(this.search !== '' || this.featured == false)
                     return items;
