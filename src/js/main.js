@@ -4,6 +4,7 @@ const DATA_PATH = './assets/data.json';
 // Library Includes
 window.Vue = require('../../node_modules/vue/dist/vue.js');
 window.VueResource = require('vue-resource');
+window.VueRouter = require('vue-router');
 window.Zepto = require('jquery');
 window.Lity = require('lity');
 
@@ -16,12 +17,22 @@ var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
 var PageFooter = require('./partials/PageFooter.vue');
 
+var routes = [
+    { path: '/home', component: HomeView },
+    { path: '/browse', component: AllView },
+    { path: '/stars', component: FavouritesView },
+    { path: '/info', component: InfoView },
+    { path: '*', redirect: '/home' }
+];
+var router = new VueRouter({routes});
+
 // Vue Setup
+Vue.use(VueRouter);
 var vm = new Vue({
     el: '#app',
+    router,
     components: {HomeView, AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
     data: {
-        view: 'home',
         filaments: []
     },
     methods: {
@@ -29,9 +40,6 @@ var vm = new Vue({
             this.$http.get(DATA_PATH).then((data) => {
                 this.filaments = data.data;
             });
-        },
-        changeView(view) {
-            this.view = view;
         }
     }
 });

@@ -3,7 +3,9 @@
         <div class="container">
             <div class="tabs is-centered">
                 <ul class="is-left">
-                    <li @click="$emit('view',key)" :class="{'is-active':view==key}" v-for="(item, key) in items"><a>{{item}}</a></li>
+                    <router-link v-for="(item, key) in items" :to="key" tag="li" active-class="is-active">
+                        <a>{{item}}</a>
+                    </router-link>
                 </ul>
             </div>
         </div>
@@ -15,10 +17,10 @@
         data () {
             return {
                 items: {
-                    home: "Home",
-                    all: "Browse",
-                    favourites: "My Stars",
-                    info: "Info & Credits"
+                    '/home': "Home",
+                    '/browse': "Browse",
+                    '/stars': "My Stars",
+                    '/info': "Info & Credits"
                 }
             }
         }

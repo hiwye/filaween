@@ -3,7 +3,7 @@
         <div class="container">
             <div class="content has-text-centered">
                 <h1 class="title is-2">
-                    Search for filaments or just <a @click="$emit('view','all')">browse</a>.
+                    Search for filaments or just <router-link to="/browse">browse</router-link>.
                 </h1>
             </div>
         </div>
