@@ -7,11 +7,11 @@
                    placeholder="Enter a brand, product, or material"
                    v-focus="true">
             <button
-                    class="button is-large"
+                    class="button is-large hint--right"
                     :class="{'is-success':show_filters}"
                     @click="toggleFilterBox"
                     v-show="filterable"
-                    :title="show_filters?'Clear filters':'Filter results'">
+                    :aria-label="show_filters?'Clear filters':'Apply filters'">
                 <i class="fa" :class="{'fa-ban':show_filters, 'fa-filter':!show_filters}"></i>
             </button>
         </div>
