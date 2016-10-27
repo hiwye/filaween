@@ -6,7 +6,7 @@ Website inspired by [Thomas Sanladerer's "Filaween"](https://www.youtube.com/wat
 It allows you to browse his 3D printer filament analysis data in a nice looking way.
 
 ## Todo
-- [ ] Filters (maybe using sliders)
+- [X] Filters (maybe using sliders)
 - [ ] Comparison mode (compare two filaments side by side)
 - [X] Text search
 - [ ] Overview Mode (only thumbnails and brand names in a grid)
