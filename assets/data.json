@@ -408,5 +408,46 @@
       "purchase":null
     },
     "id":"3dprima-primaselect-copolyester"
+  },
+  {
+    "material":"PLA",
+    "brand":"Das Filament",
+    "product":"PLA",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":"full"
+    },
+    "price_per_kg":20,
+    "quality":{
+      "rated":17,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":46,
+      "bend":{
+        "strength":4.5,
+        "adhesion":2.5
+      },
+      "pull":{
+        "strength":7.5,
+        "adhesion":5.50
+      },
+      "misc":{
+        "bendflex":13,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=7E60xP8G-dk",
+      "purchase":null
+    },
+    "id":"dasfilament-pla"
   }
 ]
