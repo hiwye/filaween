@@ -21,7 +21,7 @@
                     '/browse': "Browse",
                     '/stars': "My Stars",
                     '/guide': "Material Guide",
-                    '/info': "About"
+                    '/about': "About"
                 }
             }
         }
