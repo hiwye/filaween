@@ -4751,3 +4751,6 @@ img.logo {
 
 .card.is-fullheight {
   height: 100%; }
+
+a.has-inherit, a.has-inherit:visited {
+  color: inherit !important; }

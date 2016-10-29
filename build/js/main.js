@@ -29012,7 +29012,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29178,8 +29178,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('h1',{staticClass:"title is-2"},["\n                Search for filaments or just ",_h('router-link',{attrs:{"to":"/browse"}},["browse"]),".\n            "])])])," ",_h('filament-collection',{attrs:{"searchable":"1","filterable":"0","featured":"1","items":filaments}})])}}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function(){with(this){return _h('div',[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('h1',{staticClass:"title is-2"},["\n                Search for filaments or just ",_h('router-link',{attrs:{"to":"/browse"}},["browse"]),".\n            "])])])," ",_h('filament-collection',{attrs:{"searchable":"1","filterable":"0","featured":"1","items":filaments}})," ",_m(0)," ",_h('div',{staticClass:"container"},[_h('div',{staticClass:"columns"},[_h('div',{staticClass:"column is-2 is-offset-3 has-text-centered"},[_m(1)," ",_h('p',{staticClass:"content"},["\n                    Check out our free ",_h('router-link',{staticClass:"has-inherit",attrs:{"to":"guide"}},["filament guide"]),".\n                "])])," ",_h('div',{staticClass:"column is-2 has-text-centered"},[_m(2)," ",_h('p',{staticClass:"content"},[_h('router-link',{staticClass:"has-inherit",attrs:{"to":"browse"}},["Explore"])," the vast world of filament materials.\n                "])])," ",_m(3)])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('br')}},function(){with(this){return _h('h4',{staticClass:"title is-4"},["New to choosing materials?"])}},function(){with(this){return _h('h4',{staticClass:"title is-4"},["Explore new filaments"])}},function(){with(this){return _h('div',{staticClass:"column is-2 has-text-centered"},[_h('h4',{staticClass:"title is-4"},["Our testing procedures"])," ",_h('p',{staticClass:"content"},["\n                    Learn more about our ",_h('a',{staticClass:"has-inherit",attrs:{"href":"https://www.youtube.com/watch?v=YcQHbaVeD7I","data-lity":""}},["testing and scoring procedures"]),".\n                "])])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
