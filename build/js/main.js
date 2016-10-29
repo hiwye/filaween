@@ -28706,9 +28706,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28738,9 +28738,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-12", __vue__options__)
+    hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-12", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],14:[function(require,module,exports){
@@ -28748,6 +28748,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 // Configuration
 var DATA_PATH = './assets/data.json';
+var GUIDE_PATH = './assets/guide.json';
 var GEO_API_URL = 'https://freegeoip.net/json/';
 
 // Library Includes
@@ -28763,12 +28764,13 @@ var HomeView = require('./views/HomeView.vue');
 var AllView = require('./views/AllView.vue');
 var FavouritesView = require('./views/FavouritesView.vue');
 var DetailView = require('./views/DetailView.vue');
+var GuideView = require('./views/GuideView.vue');
 var InfoView = require('./views/InfoView.vue');
 var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
 var PageFooter = require('./partials/PageFooter.vue');
 
-var routes = [{ path: '/home', component: HomeView }, { path: '/browse', component: AllView }, { path: '/browse/:id', component: DetailView }, { path: '/stars', component: FavouritesView }, { path: '/info', component: InfoView }, { path: '*', redirect: '/home' }];
+var routes = [{ path: '/home', component: HomeView }, { path: '/browse', component: AllView }, { path: '/browse/:id', component: DetailView }, { path: '/stars', component: FavouritesView }, { path: '/guide', component: GuideView }, { path: '/about', component: InfoView }, { path: '*', redirect: '/home' }];
 var router = new VueRouter({ routes: routes });
 
 // Vue Setup
@@ -28779,6 +28781,7 @@ var vm = new Vue({
     components: { HomeView: HomeView, AllView: AllView, FavouritesView: FavouritesView, InfoView: InfoView, PageHeader: PageHeader, PageNav: PageNav, PageFooter: PageFooter },
     data: {
         filaments: [],
+        guide: [],
         countryCode: null
     },
     methods: {
@@ -28787,6 +28790,9 @@ var vm = new Vue({
 
             this.$http.get(DATA_PATH).then(function (data) {
                 _this.filaments = data.data;
+            });
+            this.$http.get(GUIDE_PATH).then(function (data) {
+                _this.guide = data.data;
             });
             this.$http.jsonp(GEO_API_URL).then(function (data) {
                 _this.countryCode = data.data.country_code;
@@ -28797,7 +28803,7 @@ var vm = new Vue({
 
 vm.fetch();
 
-},{"../../node_modules/vue/dist/vue.js":10,"./partials/PageFooter.vue":20,"./partials/PageHeader.vue":21,"./partials/PageNav.vue":22,"./views/AllView.vue":23,"./views/DetailView.vue":24,"./views/FavouritesView.vue":25,"./views/HomeView.vue":26,"./views/InfoView.vue":27,"fuse.js":1,"jquery":2,"lity":3,"vue-resource":7,"vue-router":8}],15:[function(require,module,exports){
+},{"../../node_modules/vue/dist/vue.js":10,"./partials/PageFooter.vue":20,"./partials/PageHeader.vue":21,"./partials/PageNav.vue":22,"./views/AllView.vue":23,"./views/DetailView.vue":24,"./views/FavouritesView.vue":25,"./views/GuideView.vue":26,"./views/HomeView.vue":27,"./views/InfoView.vue":28,"fuse.js":1,"jquery":2,"lity":3,"vue-resource":7,"vue-router":8}],15:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -28855,9 +28861,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11", __vue__options__)
+    hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-12", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28881,9 +28887,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14", __vue__options__)
+    hotAPI.createRecord("data-v-16", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-16", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28952,9 +28958,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],21:[function(require,module,exports){
@@ -28987,7 +28993,8 @@ exports.default = {
                 '/home': "Home",
                 '/browse': "Browse",
                 '/stars': "My Stars",
-                '/info': "Info & Credits"
+                '/guide': "Material Guide",
+                '/info': "About"
             }
         };
     }
@@ -29003,9 +29010,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue__options__)
+    hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29033,9 +29040,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29076,9 +29083,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29122,12 +29129,38 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['guide']
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_m(0)," ",_m(1)," ",_h('div',{staticClass:"columns is-multiline"},[_l((guide),function(item){return _h('div',{staticClass:"column is-one-quarter"},[_h('div',{staticClass:"card is-fullheight"},[_h('div',{staticClass:"card-image"},[_h('figure',{staticClass:"image is-4by3"},[_h('img',{attrs:{"src":'./assets/guide-images/'+item.id+'.png',"alt":'Image of '+item.title+' filament'}})])])," ",_h('div',{staticClass:"card-content"},[_h('p',{staticClass:"title is-4"},[_s(item.title)])," ",_h('p',{staticClass:"subtitle is-6"},[_s(item.claim)])," ",_h('div',{staticClass:"content"},["\n                            "+_s(item.description)+"\n                            ",_m(2,true)," ",_h('small',{directives:[{name:"show",rawName:"v-show",value:(item.nozzle_temperature),expression:"item.nozzle_temperature"}]},["Prints at "+_s(item.nozzle_temperature)+" °C"]),_m(3,true)," ",_h('small',{directives:[{name:"show",rawName:"v-show",value:(item.bed_temperature),expression:"item.bed_temperature"}]},["Bed temp. is "+_s(item.bed_temperature)+" °C"+_s(item.bed_required?'':', but is not required')])])])])])})])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',{staticClass:"title"},["Material Guide"])}},function(){with(this){return _h('div',{staticClass:"notification"},[_h('b',["New to 3D-Printing in General?"]),"\n            Learn everything about the topic using Thomas Sanladerer's excellent\n            ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=jpAlrM5OyeQ"}},["beginner videos"]),".\n        "])}},function(){with(this){return _h('br')}},function(){with(this){return _h('br')}}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-5", __vue__options__)
+  }
+})()}
+},{"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29157,7 +29190,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
-},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
+},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],28:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29178,9 +29211,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);
