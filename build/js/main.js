@@ -28551,9 +28551,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10", __vue__options__)
+    hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-10", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28708,7 +28708,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28855,9 +28855,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11", __vue__options__)
+    hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28881,9 +28881,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14", __vue__options__)
+    hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-15", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28911,9 +28911,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-15", __vue__options__)
+    hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-15", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],19:[function(require,module,exports){
@@ -29033,9 +29033,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29076,9 +29076,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":16,"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29122,9 +29122,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29152,9 +29152,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){

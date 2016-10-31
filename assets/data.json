@@ -288,7 +288,7 @@
   },
   {
     "material":"PETG",
-    "brand":"Ridgid.Ink",
+    "brand":"Rigid.Ink",
     "product":"Copolyester",
     "printer":{
       "nozzle_temp":235,
@@ -325,7 +325,7 @@
       "video":"https://www.youtube.com/watch?v=J3W_Y-fk9AQ",
       "purchase":null
     },
-    "id":"ridgidink-copolyester-petg"
+    "id":"rigidink-copolyester-petg"
   },
   {
     "material":"PLA composite",
