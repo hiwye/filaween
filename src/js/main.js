@@ -33,6 +33,14 @@ var routes = [
 ];
 var router = new VueRouter({routes});
 
+// Google Analytics
+router.afterEach(function (transition) {
+    ga('send', {
+        hitType: 'pageview',
+        page: transition.path
+    })
+});
+
 // Vue Setup
 Vue.use(VueRouter);
 var vm = new Vue({
