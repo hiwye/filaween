@@ -42,7 +42,26 @@
     <page-header></page-header>
     <page-nav></page-nav>
     <section class="section">
-        <router-view :filaments="filaments" :guide="guide"></router-view>
+        <div class="columns">
+            <div class="column is-2">
+                <!-- Side Skyscraper -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2111611078102983"
+                     data-ad-slot="7250078958"
+                     data-ad-format="auto"></ins>
+            </div>
+            <div class="column">
+                <router-view :filaments="filaments" :guide="guide"></router-view>
+            </div>
+            <div class="column is-2">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2111611078102983"
+                     data-ad-slot="7250078958"
+                     data-ad-format="auto"></ins>
+            </div>
+        </div>
     </section>
     <page-footer></page-footer>
 </div>
@@ -54,6 +73,10 @@
 
     ga('create', 'UA-62151491-5', 'auto');
 
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <script src="build/js/main.js"></script>
 </body>
