@@ -449,5 +449,46 @@
       "purchase":null
     },
     "id":"dasfilament-pla"
+  },
+  {
+    "material":"PLA",
+    "brand":"Rigid.Ink",
+    "product":"PLA",
+    "printer":{
+      "nozzle_temp":195,
+      "bed_material":"PEI",
+      "bed_temp":50,
+      "fan":"full"
+    },
+    "price_per_kg":31,
+    "quality":{
+      "rated":18,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":5,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":64.5,
+      "bend":{
+        "strength":4.5,
+        "adhesion":2.5
+      },
+      "pull":{
+        "strength":13.75,
+        "adhesion":10
+      },
+      "misc":{
+        "bendflex":12,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=vbWIcAe0gEE",
+      "purchase":null
+    },
+    "id":"rigidink-pla-pla"
   }
 ]
