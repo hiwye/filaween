@@ -20,7 +20,8 @@
                     '/home': "Home",
                     '/browse': "Browse",
                     '/stars': "My Stars",
-                    '/info': "Info & Credits"
+                    '/guide': "Material Guide",
+                    '/about': "About"
                 }
             }
         }

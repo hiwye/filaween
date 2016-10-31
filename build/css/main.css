@@ -4748,3 +4748,9 @@ img.logo {
   flex-direction: column; }
   .control.is-grouped.is-vertical .button {
     margin-top: 10px; }
+
+.card.is-fullheight {
+  height: 100%; }
+
+a.has-inherit, a.has-inherit:visited {
+  color: inherit !important; }

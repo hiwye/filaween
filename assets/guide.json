@@ -1,0 +1,38 @@
+[
+  {
+    "title":"PLA",
+    "claim":"Your versatile allrounder.",
+    "description":"PLA is one of the two most commonly used filament materials. It is commonly recommended for beginners due to it's ease of use.",
+    "nozzle_temperature":"180-220",
+    "bed_temperature":"20-55",
+    "bed_required":false,
+    "id":"pla"
+  },
+  {
+    "title":"ABS",
+    "claim":"When durability counts.",
+    "description":"ABS also belongs to the most commonly used material. It is best used when making durable parts that should be able to withstand high temperatures.",
+    "nozzle_temperature":"220-235",
+    "bed_temperature":"80-110",
+    "bed_required":true,
+    "id":"abs"
+  },
+  {
+    "title":"PETG",
+    "claim":"High strength and food-safe.",
+    "description":"PETG is a very strong material. It's FDA approved for food-safety. It almost doesn't warp, produces no odors when printing, and is very good at bridging.",
+    "nozzle_temperature":"230-255",
+    "bed_temperature":"55-70",
+    "bed_required":true,
+    "id":"petg"
+  },
+  {
+    "title":"Composites",
+    "claim":"Filaments with power-ups.",
+    "description":"Composite filaments combine plastics (PLA, ABS, etc.) with other ingredients (metals, sawdust, carbon fiber, etc.) to create materials with unique properties (such as magnetism).",
+    "nozzle_temperature":null,
+    "bed_temperature":null,
+    "bed_required":null,
+    "id":"composites"
+  }
+]
