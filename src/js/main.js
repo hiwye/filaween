@@ -21,6 +21,7 @@ var InfoView = require('./views/InfoView.vue');
 var PageHeader = require('./partials/PageHeader.vue');
 var PageNav = require('./partials/PageNav.vue');
 var PageFooter = require('./partials/PageFooter.vue');
+var Adsense = require('./partials/Adsense.vue');
 
 var routes = [
     { path: '/home', component: HomeView },
@@ -46,7 +47,7 @@ Vue.use(VueRouter);
 var vm = new Vue({
     el: '#app',
     router,
-    components: {HomeView, AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter},
+    components: {HomeView, AllView, FavouritesView, InfoView, PageHeader, PageNav, PageFooter, Adsense},
     data: {
         filaments: [],
         guide: [],
@@ -65,6 +66,13 @@ var vm = new Vue({
             });
         }
     }
+});
+
+Vue.nextTick(function() {
+    // Adsense
+    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    });
 });
 
 vm.fetch();

@@ -44,29 +44,20 @@
     <section class="section">
         <div class="columns">
             <div class="column is-2">
-                <!-- Skyscraper Left -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-2111611078102983"
-                     data-ad-slot="7250078958"
-                     data-ad-format="auto"></ins>
+                <adsense location="sidebar_left"></adsense>
             </div>
             <div class="column">
                 <router-view :filaments="filaments" :guide="guide"></router-view>
+                <adsense location="footer"></adsense>
             </div>
             <div class="column is-2 has-text-right">
-                <!-- Skyscraper Right -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-2111611078102983"
-                     data-ad-slot="8587211353"
-                     data-ad-format="auto"></ins>
+                <adsense location="sidebar_right"></adsense>
             </div>
         </div>
     </section>
     <page-footer></page-footer>
 </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     // Google Analytics
     (function(f,i,l,a,w,e,n){f['GoogleAnalyticsObject']=w;f[w]=f[w]||function(){
@@ -75,12 +66,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-62151491-5', 'auto');
-
-    // Adsense
-    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    });
-
 </script>
 <script src="build/js/main.js"></script>
 </body>
