@@ -65,16 +65,19 @@
 
         <filament v-for="item in filtered" :item="item"></filament>
 
+        <intro-section v-show="!browseable && search === ''"></intro-section>
+
         <collection-empty v-show="(browseable && filtered.length == 0) || (!browseable && filtered.length == 0 && search.length != 0)"></collection-empty>
     </div>
 </template>
 <script>
     var Filament = require('./FilamentSummary.vue');
     var CollectionEmpty = require('../partials/CollectionEmpty.vue');
+    var IntroSection = require('../partials/IntroSection.vue');
     import {focus} from 'vue-focus';
     export default {
         props: ['items','searchable', 'filterable', 'browseable', 'featured'],
-        components: {Filament, CollectionEmpty},
+        components: {Filament, CollectionEmpty, IntroSection},
         directives: {focus},
         data () {
             return {
