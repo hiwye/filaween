@@ -27,6 +27,8 @@
                           <option value="alphabet">Alphabetical [A-Z]</option>
                           <option value="revchron">Chronological [Newest-Oldest]</option>
                           <option value="price">Price [Low-High]</option>
+                          <option value="quality">Quality [High-Low]</option>
+                          <option value="strength">Strength [High-Low]</option>
                         </select>
                       </span>
                     </p>
@@ -140,6 +142,12 @@
                 }else if(this.sort_mode === 'price'){
                     //by price
                     sorted = this.propSorter(filtered, 'price_per_kg');
+                }else if(this.sort_mode === 'quality'){
+                    //by quality
+                    sorted = this.propSorter(filtered, 'quality.rated').reverse();
+                }else if(this.sort_mode === 'strength'){
+                    //by strength
+                    sorted = this.propSorter(filtered, 'strength.rated').reverse();
                 }else{
                     //default
                     sorted = this.featuredSorter(filtered);
@@ -192,10 +200,11 @@
             },
 
             propSorter(items, prop){
+                var that = this;
                 return items.sort(function(a, b){
-                    if ( a[prop] < b[prop] )
+                    if ( that.dotNotation(a, prop) < that.dotNotation(b, prop) )
                         return -1;
-                    if ( a[prop] > b[prop] )
+                    if ( that.dotNotation(a, prop) > that.dotNotation(b, prop) )
                         return 1;
                     return 0;
                 });
@@ -221,6 +230,10 @@
                 var regular = items.reverse();
 
                 return featured.concat(regular);
+            },
+
+            dotNotation(object, path){
+                return path.split('.').reduce(function (obj,i) {return obj[i]}, object);
             }
         }
     }
