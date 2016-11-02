@@ -490,5 +490,46 @@
       "purchase":null
     },
     "id":"rigidink-pla-pla"
+  },
+  {
+    "material":"ABS",
+    "brand":"Innofil3D",
+    "product":"ABS",
+    "printer":{
+      "nozzle_temp":235,
+      "bed_material":"PEI",
+      "bed_temp":100,
+      "fan":"full"
+    },
+    "price_per_kg":23,
+    "quality":{
+      "rated":14,
+      "threedbenchy":3,
+      "overhangs":1,
+      "details":5,
+      "bridges":5,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":64.5,
+      "bend":{
+        "strength":0.75,
+        "adhesion":1
+      },
+      "pull":{
+        "strength":6.25,
+        "adhesion":3
+      },
+      "misc":{
+        "bendflex":"n/a",
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=Eur_PO5OYec",
+      "purchase":null
+    },
+    "id":"innofil3d-abs-abs"
   }
 ]
