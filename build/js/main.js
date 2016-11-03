@@ -28553,7 +28553,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28719,7 +28719,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-13", __vue__options__)
   } else {
-    hotAPI.reload("data-v-13", __vue__options__)
+    hotAPI.rerender("data-v-13", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":17,"../partials/IntroSection.vue":21,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28742,7 +28742,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"box",class:{featured:item.featured}},[_h('article',{staticClass:"media"},[_h('div',{staticClass:"media-left"},[_h('figure',{staticClass:"image is-128x128"},[_h('a',{attrs:{"href":'./assets/filament-images/'+item.id+'.png',"data-lity":""}},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.id+'.png',"alt":'Image of '+item.brand+' '+item.product}})])])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('filament-header',{attrs:{"item":item}})," ",_h('div',{staticClass:"level"},[_h('div',{staticClass:"level-item has-text-centered"},[_m(0)," ",_h('p',{staticClass:"title"},[_s(item.price_per_kg||'n/a')+" €"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(1)," ",_h('p',{staticClass:"title"},[_s(item.quality.rated)+"/20"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(2)," ",_h('p',{staticClass:"title"},[_s(item.strength.rated)+" kg"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(3)," ",_h('p',{staticClass:"title"},[_s(item.ease_of_use)+"/5"])])])])," ",_h('div',{staticClass:"column is-2"},[_h('filament-footer',{attrs:{"item":item}})])])])])])])}}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"box",class:{featured:item.featured}},[_h('article',{staticClass:"media"},[_h('div',{staticClass:"media-left"},[_h('figure',{staticClass:"image is-128x128"},[_h('a',{attrs:{"href":'./assets/filament-images/'+item.id+'.png',"data-lity":""}},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.id+'.png',"alt":'Image of '+item.brand+' '+item.product}})])])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('div',{staticClass:"columns is-desktop"},[_h('div',{staticClass:"column"},[_h('filament-header',{attrs:{"item":item}})," ",_h('div',{staticClass:"level"},[_h('div',{staticClass:"level-item has-text-centered"},[_m(0)," ",_h('p',{staticClass:"title"},[_s(item.price_per_kg||'n/a')+" €"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(1)," ",_h('p',{staticClass:"title"},[_s(item.quality.rated)+"/20"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(2)," ",_h('p',{staticClass:"title"},[_s(item.strength.rated)+" kg"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(3)," ",_h('p',{staticClass:"title"},[_s(item.ease_of_use)+"/5"])])])])," ",_h('div',{staticClass:"column is-2-desktop"},[_h('filament-footer',{attrs:{"item":item}})])])])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _h('p',{staticClass:"heading"},["Retail Price per kg"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Overall Quality"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Rated Strength"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Ease of use"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -28751,7 +28751,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-16", __vue__options__)
   } else {
-    hotAPI.reload("data-v-16", __vue__options__)
+    hotAPI.rerender("data-v-16", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],14:[function(require,module,exports){
@@ -28901,7 +28901,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.reload("data-v-10", __vue__options__)
+    hotAPI.rerender("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28916,7 +28916,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.reload("data-v-12", __vue__options__)
+    hotAPI.rerender("data-v-12", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28942,7 +28942,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.reload("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],19:[function(require,module,exports){
@@ -28964,7 +28964,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function(){with(this){return _h('div',{staticClass:"control is-grouped is-vertical"},[_h('a',{staticClass:"button",class:{'is-info':isFavourite(item.id)},on:{"click":function($event){toggleFavourite(item.id)}}},[_m(0),"   ",_m(1)])," ",_h('router-link',{staticClass:"button",attrs:{"to":'/browse/'+item.id,"active-class":"is-hidden"}},[_m(2),"   ",_m(3)])," ",_h('a',{staticClass:"button",attrs:{"href":item.links.video,"data-lity":""}},[_m(4),"   ",_m(5)])," ",_h('a',{directives:[{name:"show",rawName:"v-show",value:(item.links.purchase),expression:"item.links.purchase"}],staticClass:"button",attrs:{"href":item.links.purchase,"target":"_blank"}},[_m(6),"   ",_m(7)])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('i',{staticClass:"fa fa-star"})}},function(){with(this){return _h('b',["Star"])}},function(){with(this){return _h('i',{staticClass:"fa fa-search"})}},function(){with(this){return _h('b',["Details"])}},function(){with(this){return _h('i',{staticClass:"fa fa-play"})}},function(){with(this){return _h('b',["Watch video"])}},function(){with(this){return _h('i',{staticClass:"fa fa-shopping-cart"})}},function(){with(this){return _h('b',["Purchase online"])}}]
+__vue__options__.staticRenderFns = [function(){with(this){return _h('i',{staticClass:"fa fa-star"})}},function(){with(this){return _h('b',["Star"])}},function(){with(this){return _h('i',{staticClass:"fa fa-search"})}},function(){with(this){return _h('b',["Details"])}},function(){with(this){return _h('i',{staticClass:"fa fa-play"})}},function(){with(this){return _h('b',["Video"])}},function(){with(this){return _h('i',{staticClass:"fa fa-shopping-cart"})}},function(){with(this){return _h('b',["Purchase online"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -28972,7 +28972,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-17", __vue__options__)
   } else {
-    hotAPI.reload("data-v-17", __vue__options__)
+    hotAPI.rerender("data-v-17", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],20:[function(require,module,exports){
@@ -28998,7 +28998,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-18", __vue__options__)
   } else {
-    hotAPI.reload("data-v-18", __vue__options__)
+    hotAPI.rerender("data-v-18", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],21:[function(require,module,exports){
@@ -29013,7 +29013,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.reload("data-v-15", __vue__options__)
+    hotAPI.rerender("data-v-15", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],22:[function(require,module,exports){
@@ -29028,7 +29028,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29043,7 +29043,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7", __vue__options__)
+    hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29080,7 +29080,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29110,7 +29110,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29153,7 +29153,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-5", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":17,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
@@ -29199,7 +29199,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],28:[function(require,module,exports){
@@ -29225,7 +29225,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],29:[function(require,module,exports){
@@ -29255,7 +29255,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],30:[function(require,module,exports){
@@ -29281,7 +29281,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6", __vue__options__)
+    hotAPI.rerender("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);

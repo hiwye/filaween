@@ -10,7 +10,7 @@
             </div>
             <div class="media-content">
                 <div class="content">
-                    <div class="columns">
+                    <div class="columns is-desktop">
                         <div class="column">
                             <filament-header :item="item"></filament-header>
                             <div class="level">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column is-2">
+                        <div class="column is-2-desktop">
                             <filament-footer :item="item"></filament-footer>
                         </div>
                     </div>
