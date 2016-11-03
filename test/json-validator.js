@@ -47,7 +47,7 @@ var validate = validator({
                     fan: {
                         required: true,
                         description: "Fan?",
-                        type: "string"
+                        type: "number"
                     }
                 }
             },

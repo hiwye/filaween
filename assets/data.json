@@ -7,7 +7,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":20,
     "quality":{
@@ -48,7 +48,7 @@
       "nozzle_temp":255,
       "bed_material":"PEI",
       "bed_temp":100,
-      "fan":"no"
+      "fan":0
     },
     "price_per_kg":20,
     "quality":{
@@ -89,7 +89,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":35,
     "quality":{
@@ -130,7 +130,7 @@
       "nozzle_temp":215,
       "bed_material":"Magigoo",
       "bed_temp":65,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":40,
     "quality":{
@@ -171,7 +171,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":63,
     "quality":{
@@ -212,7 +212,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":null,
     "quality":{
@@ -253,7 +253,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":26,
     "quality":{
@@ -294,7 +294,7 @@
       "nozzle_temp":235,
       "bed_material":"Glue Stick",
       "bed_temp":75,
-      "fan":"20% fixed"
+      "fan":20
     },
     "price_per_kg":36,
     "quality":{
@@ -335,7 +335,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":86,
     "quality":{
@@ -376,7 +376,7 @@
       "nozzle_temp":250,
       "bed_material":"Glue Stick",
       "bed_temp":50,
-      "fan":"20% fixed"
+      "fan":20
     },
     "price_per_kg":80,
     "quality":{
@@ -417,7 +417,7 @@
       "nozzle_temp":210,
       "bed_material":"PEI",
       "bed_temp":55,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":20,
     "quality":{
@@ -458,7 +458,7 @@
       "nozzle_temp":195,
       "bed_material":"PEI",
       "bed_temp":50,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":31,
     "quality":{
@@ -499,7 +499,7 @@
       "nozzle_temp":235,
       "bed_material":"PEI",
       "bed_temp":100,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":23,
     "quality":{
@@ -540,7 +540,7 @@
       "nozzle_temp":240,
       "bed_material":"Glue Stick",
       "bed_temp":65,
-      "fan":"full"
+      "fan":100
     },
     "price_per_kg":71,
     "quality":{

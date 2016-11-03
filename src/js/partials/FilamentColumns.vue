@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                     <td>Cooling Fan</td>
-                    <td><b>{{item.printer.fan}}</b></td>
+                    <td><b>{{item.printer.fan}} %</b></td>
                 </tr>
             </table>
         </div>
