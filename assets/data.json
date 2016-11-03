@@ -531,5 +531,46 @@
       "purchase":null
     },
     "id":"innofil3d-abs-abs"
+  },
+  {
+    "material":"PETG",
+    "brand":"Taulman",
+    "product":"t-glase",
+    "printer":{
+      "nozzle_temp":240,
+      "bed_material":"Glue Stick",
+      "bed_temp":65,
+      "fan":"full"
+    },
+    "price_per_kg":71,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":3,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":39.5,
+      "bend":{
+        "strength":1.75,
+        "adhesion":1.5
+      },
+      "pull":{
+        "strength":9.75,
+        "adhesion":6.5
+      },
+      "misc":{
+        "bendflex":29,
+        "temperature_stability":3
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=YI0FM_XdrzE",
+      "purchase":null
+    },
+    "id":"taulman-tglase-petg"
   }
 ]
