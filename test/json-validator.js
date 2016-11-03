@@ -140,7 +140,7 @@ var validate = validator({
                         properties: {
                             bendflex: {
                                 required: true,
-                                type: "number"
+                                type: ["null", "number"]
                             },
                             temperature_stability: {
                                 required: true,

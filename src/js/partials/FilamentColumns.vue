@@ -84,7 +84,7 @@
                     <td>Pull - Layer adhesion</td>
                     <td>{{item.strength.pull.adhesion}} kg</td>
                 </tr>
-                <tr>
+                <tr v-show="item.strength.misc.bendflex">
                     <td>Bend flex at 1kg load</td>
                     <td><b>{{item.strength.misc.bendflex}} mm</b></td>
                 </tr>

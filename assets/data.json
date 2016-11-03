@@ -521,7 +521,7 @@
         "adhesion":3
       },
       "misc":{
-        "bendflex":"n/a",
+        "bendflex":null,
         "temperature_stability":4
       }
     },
