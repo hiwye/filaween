@@ -572,5 +572,46 @@
       "purchase":null
     },
     "id":"taulman-tglase-petg"
+  },
+  {
+    "material":"PC",
+    "brand":"Generic",
+    "product":"Polycarbonate",
+    "printer":{
+      "nozzle_temp":295,
+      "bed_material":"PEI",
+      "bed_temp":110,
+      "fan":0
+    },
+    "price_per_kg":31,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":3,
+      "bridges":3,
+      "warp":"n/a"
+    },
+    "strength":{
+      "rated":76,
+      "bend":{
+        "strength":4.6,
+        "adhesion":3.99
+      },
+      "pull":{
+        "strength":25,
+        "adhesion":6.35
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":5
+      }
+    },
+    "ease_of_use":3,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=pc9qNfqVKRw",
+      "purchase":null
+    },
+    "id":"generic-pc"
   }
 ]
