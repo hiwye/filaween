@@ -613,5 +613,46 @@
       "purchase":null
     },
     "id":"generic-pc"
+  },
+  {
+    "material":"ASA",
+    "brand":"Rigid.Ink",
+    "product":"ASA",
+    "printer":{
+      "nozzle_temp":245,
+      "bed_material":"PEI",
+      "bed_temp":100,
+      "fan":20
+    },
+    "price_per_kg":39,
+    "quality":{
+      "rated":19,
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":5,
+      "bridges":4,
+      "warp":"slight"
+    },
+    "strength":{
+      "rated":32.5,
+      "bend":{
+        "strength":3.89,
+        "adhesion":1.36
+      },
+      "pull":{
+        "strength":7.85,
+        "adhesion":2.22
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":null,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=0cGk7VK39ZQ",
+      "purchase":null
+    },
+    "id":"rigidink-asa-asa"
   }
 ]
