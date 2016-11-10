@@ -8,7 +8,7 @@
                 </tr>
                 <tr>
                     <td>Ease of use</td>
-                    <td><b>{{item.ease_of_use}}/5</b></td>
+                    <td><b>{{item.ease_of_use?item.ease_of_use+' /5':'n/a'}}</b></td>
                 </tr>
                 <tr>
                     <td>Temperature stability</td>

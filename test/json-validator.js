@@ -153,7 +153,7 @@ var validate = validator({
             ease_of_use: {
                 required: true,
                 description: "Ease of use rating out of 5",
-                type: "number"
+                type: ["number","null"]
             },
             links: {
                 required: true,
@@ -185,5 +185,6 @@ if(validate(json)){
     console.log("JSON test passed!");
 }else{
     console.log("JSON test failed!");
+    console.log(validate.errors);
     process.exit(1);
 }

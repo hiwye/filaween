@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Ease of use</p>
-                                    <p class="title">{{item.ease_of_use}}/5</p>
+                                    <p class="title">{{item.ease_of_use?item.ease_of_use+'/5':'n/a'}}</p>
                                 </div>
                             </div>
                         </div>
