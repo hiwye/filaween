@@ -28553,7 +28553,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-13", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-13", __vue__options__)
+    hotAPI.reload("data-v-13", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28719,7 +28719,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-12", __vue__options__)
+    hotAPI.reload("data-v-12", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":17,"../partials/IntroSection.vue":21,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28749,9 +28749,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-17", __vue__options__)
+    hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-17", __vue__options__)
+    hotAPI.reload("data-v-14", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],14:[function(require,module,exports){
@@ -28899,9 +28899,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],17:[function(require,module,exports){
@@ -28916,7 +28916,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.reload("data-v-11", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28942,7 +28942,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-15", __vue__options__)
+    hotAPI.reload("data-v-15", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],19:[function(require,module,exports){
@@ -28970,9 +28970,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18", __vue__options__)
+    hotAPI.createRecord("data-v-17", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-18", __vue__options__)
+    hotAPI.reload("data-v-17", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],20:[function(require,module,exports){
@@ -28996,9 +28996,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14", __vue__options__)
+    hotAPI.createRecord("data-v-16", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-14", __vue__options__)
+    hotAPI.reload("data-v-16", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],21:[function(require,module,exports){
@@ -29011,24 +29011,24 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-16", __vue__options__)
+    hotAPI.createRecord("data-v-18", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-16", __vue__options__)
+    hotAPI.reload("data-v-18", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],22:[function(require,module,exports){
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function(){with(this){return _m(0)}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('footer',{staticClass:"footer"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('p',[_h('strong',["#Filaween"])," by ",_h('a',{attrs:{"href":"http://toms3d.org"}},["Thomas Sanladerer"]),"\n                and ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),".\n            "])," ",_h('p',[_h('a',{attrs:{"href":"https://github.com/hiwye/filaween"}},["\n                    Open Source on GitHub\n                "]),"\n                ·\n                ",_h('a',{attrs:{"href":"https://walkermedia.de/about/legal.html"}},["\n                    Impressum und Datenschutz\n                "])])])])])}}]
+__vue__options__.staticRenderFns = [function(){with(this){return _h('footer',{staticClass:"footer"},[_h('div',{staticClass:"container"},[_h('div',{staticClass:"content has-text-centered"},[_h('p',[_h('strong',["#Filaween"])," by ",_h('a',{attrs:{"href":"http://toms3d.org"}},["Thomas Sanladerer"]),"\n                and ",_h('a',{attrs:{"href":"http://sebastianwalker.org"}},["Sebastian Walker"]),".\n            "])," ",_h('p',[_h('a',{attrs:{"href":"https://walkermedia.de/about/legal.html"}},["\n                    Impressum und Datenschutz\n                "])])])])])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue__options__)
+    hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7", __vue__options__)
+    hotAPI.reload("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29041,9 +29041,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29078,9 +29078,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-10", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
@@ -29110,7 +29110,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.reload("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
@@ -29151,9 +29151,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":17,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
@@ -29197,9 +29197,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5", __vue__options__)
+    hotAPI.reload("data-v-7", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],28:[function(require,module,exports){
@@ -29223,9 +29223,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.reload("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],29:[function(require,module,exports){
@@ -29255,7 +29255,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1", __vue__options__)
+    hotAPI.reload("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],30:[function(require,module,exports){
@@ -29279,9 +29279,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8", __vue__options__)
+    hotAPI.reload("data-v-3", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);
