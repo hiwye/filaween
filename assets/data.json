@@ -205,7 +205,7 @@
     "id":"faberdashery-pla-pla"
   },
   {
-    "material":"PLA composite",
+    "material":"PLA Composite",
     "brand":"Protopasta",
     "product":"Matte Fiber",
     "printer":{
@@ -328,7 +328,7 @@
     "id":"rigidink-copolyester-petg"
   },
   {
-    "material":"PLA composite",
+    "material":"PLA Composite",
     "brand":"Protopasta",
     "product":"HTPLA-CF",
     "printer":{
