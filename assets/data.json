@@ -654,5 +654,46 @@
       "purchase":null
     },
     "id":"rigidink-asa-asa"
+  },
+  {
+    "material":"PLA Composite",
+    "brand":"3DPrima",
+    "product":"PrimaSelect METAL - Copper",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":100
+    },
+    "price_per_kg":67,
+    "quality":{
+      "rated":17,
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":4,
+      "bridges":3,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":6.5,
+      "bend":{
+        "strength":0.25,
+        "adhesion":0
+      },
+      "pull":{
+        "strength":3,
+        "adhesion":0.75
+      },
+      "misc":{
+        "bendflex":null,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":2,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=5j-0kRawD_c",
+      "purchase":null
+    },
+    "id":"3dprima-primaselect-copper"
   }
 ]
