@@ -574,6 +574,47 @@
     "id":"taulman-tglase-petg"
   },
   {
+    "material":"PLA",
+    "brand":"Rigid.Ink",
+    "product":"PLA Plus",
+    "printer":{
+      "nozzle_temp":235,
+      "bed_material":"PEI",
+      "bed_temp":60,
+      "fan":100
+    },
+    "price_per_kg":31,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":3,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":22,
+      "bend":{
+        "strength":2.25,
+        "adhesion":0.25
+      },
+      "pull":{
+        "strength":7.5,
+        "adhesion":2.0
+      },
+      "misc":{
+        "bendflex":21,
+        "temperature_stability":null
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=_lYbeA4GmQY",
+      "purchase":null
+    },
+    "id":"rigidink-plaplus-pla"
+  },
+  {
     "material":"PC",
     "brand":"Generic",
     "product":"Polycarbonate",

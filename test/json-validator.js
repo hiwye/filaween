@@ -144,7 +144,7 @@ var validate = validator({
                             },
                             temperature_stability: {
                                 required: true,
-                                type: "number"
+                                type: ["null", "number"]
                             }
                         }
                     }
