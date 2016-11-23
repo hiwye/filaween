@@ -29,6 +29,7 @@
                           <option value="price">Price [Low-High]</option>
                           <option value="quality">Quality [High-Low]</option>
                           <option value="strength">Strength [High-Low]</option>
+                          <option value="ease_of_use">Ease of Use [High-Low]</option>
                         </select>
                       </span>
                     </p>
@@ -148,6 +149,9 @@
                 }else if(this.sort_mode === 'strength'){
                     //by strength
                     sorted = this.propSorter(filtered, 'strength.rated').reverse();
+                }else if(this.sort_mode === 'ease_of_use'){
+                    //by ease of use
+                    sorted = this.propSorter(filtered, 'ease_of_use').reverse();
                 }else{
                     //default
                     sorted = this.featuredSorter(filtered);
