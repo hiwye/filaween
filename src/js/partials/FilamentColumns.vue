@@ -22,7 +22,12 @@
                     <td><b>{{item.printer.nozzle_temp}} °C</b></td>
                 </tr>
                 <tr>
-                    <td>Print Bed Temperature</td>
+                    <td>
+                        Print Bed Temperature
+                        <a href="https://www.youtube.com/watch?v=eure74A9HNc" data-lity>
+                            <i class="fa fa-question-circle is-gray"></i>
+                        </a>
+                    </td>
                     <td><b>{{item.printer.bed_temp}} °C</b></td>
                 </tr>
                 <tr>
