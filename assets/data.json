@@ -777,5 +777,46 @@
       "purchase":null
     },
     "id":"taulman-alloy910-pa"
+  },
+  {
+    "material":"PETG",
+    "brand":"Das Filament",
+    "product":"PETG",
+    "printer":{
+      "nozzle_temp":230,
+      "bed_material":"Glue Stick",
+      "bed_temp":75,
+      "fan":20
+    },
+    "price_per_kg":29,
+    "quality":{
+      "rated":16,
+      "threedbenchy":5,
+      "overhangs":3,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "rated":72.5,
+      "bend":{
+        "strength":4.92,
+        "adhesion":2.46
+      },
+      "pull":{
+        "strength":23.7,
+        "adhesion":7.9
+      },
+      "misc":{
+        "bendflex":9,
+        "temperature_stability":3
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=mVpconN4sCA",
+      "purchase":null
+    },
+    "id":"dasfilament-petg"
   }
 ]
