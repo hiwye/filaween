@@ -61,11 +61,6 @@ var validate = validator({
                 description: "Quality rating",
                 type: "object",
                 properties: {
-                    rated: {
-                        required: true,
-                        description: "Overall quality out of 20",
-                        type: "number"
-                    },
                     threedbenchy: {
                         required: true,
                         description: "3D Benchy rating out of 5",
@@ -98,11 +93,6 @@ var validate = validator({
                 description: "Strength rating",
                 type: "object",
                 properties: {
-                    rated: {
-                        required: true,
-                        description: "Overall strength in kg",
-                        type: "number"
-                    },
                     bend: {
                         required: true,
                         description: "Bend rating",

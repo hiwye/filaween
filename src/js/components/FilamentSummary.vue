@@ -20,11 +20,11 @@
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Overall Quality</p>
-                                    <p class="title">{{item.quality.rated}}/20</p>
+                                    <p class="title">{{quality}}/20</p>
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Rated Strength</p>
-                                    <p class="title">{{item.strength.rated}} kg</p>
+                                    <p class="title">{{pullStrength}}</p>
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Ease of use</p>
@@ -47,6 +47,14 @@
     var FilamentFooter = require('../partials/FilamentFooter.vue');
     export default {
         props: ['item'],
-        components: {FilamentHeader, FilamentColumns, FilamentFooter}
+        components: {FilamentHeader, FilamentColumns, FilamentFooter},
+        computed: {
+            quality(){
+                return Score.quality(this.item);
+            },
+            pullStrength(){
+                return Score.pullStrength(this.item);
+            }
+        }
     }
 </script>

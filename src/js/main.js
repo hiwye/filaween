@@ -10,6 +10,7 @@ window.VueRouter = require('vue-router');
 window.Zepto = require('jquery');
 window.Lity = require('lity');
 window.Fuse = require('fuse.js');
+window.Score = require('./score.js');
 
 // Component Includes
 var HomeView = require('./views/HomeView.vue');

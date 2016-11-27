@@ -65,7 +65,7 @@
                 </tr>
                 <tr class="is-highlighted">
                     <td>Overall Quality</td>
-                    <td><b>{{item.quality.rated}}/20</b></td>
+                    <td><b>{{quality}}/20</b></td>
                 </tr>
             </table>
         </div>
@@ -93,9 +93,13 @@
                     <td>Bend flex at 1kg load</td>
                     <td><b>{{item.strength.misc.bendflex}} mm</b></td>
                 </tr>
+                <tr v-show="item.strength.weighted">
+                    <td>Weighted strength rating</td>
+                    <td><b>{{weightedStrength}} kg</b></td>
+                </tr>
                 <tr class="is-highlighted">
-                    <td>Rated Strength</td>
-                    <td><b>{{item.strength.rated}} kg</b></td>
+                    <td>Pull Test Rating</td>
+                    <td><b>{{pullStrength}}</b></td>
                 </tr>
             </table>
         </div>
@@ -103,6 +107,17 @@
 </template>
 <script>
     export default {
-        props: ['item']
+        props: ['item'],
+        computed: {
+            quality(){
+                return Score.quality(this.item);
+            },
+            pullStrength(){
+                return Score.pullStrength(this.item);
+            },
+            weightedStrength(){
+                return Score.weightedStrength(this.item);
+            }
+        }
     }
 </script>

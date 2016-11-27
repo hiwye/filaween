@@ -28551,9 +28551,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-13", __vue__options__)
+    hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-13", __vue__options__)
+    hotAPI.rerender("data-v-12", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],12:[function(require,module,exports){
@@ -28613,7 +28613,7 @@ exports.default = {
 
             var that = this;
             searched.forEach(function (item) {
-                if (that.matchingFilter(that.filter_material, item.material) && that.maximumFilter(that.filter_price, item.price_per_kg) && that.minimumFilter(that.filter_quality, item.quality.rated) && that.minimumFilter(that.filter_strength, item.strength.rated)) {
+                if (that.matchingFilter(that.filter_material, item.material) && that.maximumFilter(that.filter_price, item.price_per_kg) && that.minimumFilter(that.filter_quality, Score.quality(item)) && that.minimumFilter(that.filter_strength, Score.pullStrength(item))) {
                     filtered.push(item);
                 }
             });
@@ -28625,9 +28625,13 @@ exports.default = {
             } else if (this.sort_mode === 'price') {
                 sorted = this.propSorter(filtered, 'price_per_kg');
             } else if (this.sort_mode === 'quality') {
-                sorted = this.propSorter(filtered, 'quality.rated').reverse();
+                sorted = this.closureSorter(filtered, function (f) {
+                    return Score.quality(f);
+                }).reverse();
             } else if (this.sort_mode === 'strength') {
-                sorted = this.propSorter(filtered, 'strength.rated').reverse();
+                sorted = this.closureSorter(filtered, function (f) {
+                    return Score.pullStrength(f);
+                }).reverse();
             } else if (this.sort_mode === 'ease_of_use') {
                 sorted = this.propSorter(filtered, 'ease_of_use').reverse();
             } else {
@@ -28682,6 +28686,13 @@ exports.default = {
                 return 0;
             });
         },
+        closureSorter: function closureSorter(items, closure) {
+            return items.sort(function (a, b) {
+                if (closure(a) < closure(b)) return -1;
+                if (closure(a) > closure(b)) return 1;
+                return 0;
+            });
+        },
         revchronSorter: function revchronSorter(items) {
             return items.reverse();
         },
@@ -28721,7 +28732,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-11", __vue__options__)
+    hotAPI.reload("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":17,"../partials/IntroSection.vue":21,"./FilamentSummary.vue":13,"vue":9,"vue-focus":5,"vue-hot-reload-api":6}],13:[function(require,module,exports){
@@ -28738,22 +28749,30 @@ var FilamentColumns = require('../partials/FilamentColumns.vue');
 var FilamentFooter = require('../partials/FilamentFooter.vue');
 exports.default = {
     props: ['item'],
-    components: { FilamentHeader: FilamentHeader, FilamentColumns: FilamentColumns, FilamentFooter: FilamentFooter }
+    components: { FilamentHeader: FilamentHeader, FilamentColumns: FilamentColumns, FilamentFooter: FilamentFooter },
+    computed: {
+        quality: function quality() {
+            return Score.quality(this.item);
+        },
+        pullStrength: function pullStrength() {
+            return Score.pullStrength(this.item);
+        }
+    }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"box",class:{featured:item.featured}},[_h('article',{staticClass:"media"},[_h('div',{staticClass:"media-left"},[_h('figure',{staticClass:"image is-128x128"},[_h('a',{attrs:{"href":'./assets/filament-images/'+item.id+'.png',"data-lity":""}},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.id+'.png',"alt":'Image of '+item.brand+' '+item.product}})])])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('div',{staticClass:"columns is-desktop"},[_h('div',{staticClass:"column"},[_h('filament-header',{attrs:{"item":item}})," ",_h('div',{staticClass:"level"},[_h('div',{staticClass:"level-item has-text-centered"},[_m(0)," ",_h('p',{staticClass:"title"},[_s(item.price_per_kg||'n/a')+" €"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(1)," ",_h('p',{staticClass:"title"},[_s(item.quality.rated)+"/20"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(2)," ",_h('p',{staticClass:"title"},[_s(item.strength.rated)+" kg"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(3)," ",_h('p',{staticClass:"title"},[_s(item.ease_of_use?item.ease_of_use+'/5':'n/a')])])])])," ",_h('div',{staticClass:"column is-2-desktop"},[_h('filament-footer',{attrs:{"item":item}})])])])])])])}}
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"box",class:{featured:item.featured}},[_h('article',{staticClass:"media"},[_h('div',{staticClass:"media-left"},[_h('figure',{staticClass:"image is-128x128"},[_h('a',{attrs:{"href":'./assets/filament-images/'+item.id+'.png',"data-lity":""}},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.id+'.png',"alt":'Image of '+item.brand+' '+item.product}})])])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('div',{staticClass:"columns is-desktop"},[_h('div',{staticClass:"column"},[_h('filament-header',{attrs:{"item":item}})," ",_h('div',{staticClass:"level"},[_h('div',{staticClass:"level-item has-text-centered"},[_m(0)," ",_h('p',{staticClass:"title"},[_s(item.price_per_kg||'n/a')+" €"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(1)," ",_h('p',{staticClass:"title"},[_s(quality)+"/20"])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(2)," ",_h('p',{staticClass:"title"},[_s(pullStrength)])])," ",_h('div',{staticClass:"level-item has-text-centered"},[_m(3)," ",_h('p',{staticClass:"title"},[_s(item.ease_of_use?item.ease_of_use+'/5':'n/a')])])])])," ",_h('div',{staticClass:"column is-2-desktop"},[_h('filament-footer',{attrs:{"item":item}})])])])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _h('p',{staticClass:"heading"},["Retail Price per kg"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Overall Quality"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Rated Strength"])}},function(){with(this){return _h('p',{staticClass:"heading"},["Ease of use"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14", __vue__options__)
+    hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-15", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":18,"../partials/FilamentFooter.vue":19,"../partials/FilamentHeader.vue":20,"vue":9,"vue-hot-reload-api":6}],14:[function(require,module,exports){
@@ -28771,6 +28790,7 @@ window.VueRouter = require('vue-router');
 window.Zepto = require('jquery');
 window.Lity = require('lity');
 window.Fuse = require('fuse.js');
+window.Score = require('./score.js');
 
 // Component Includes
 var HomeView = require('./views/HomeView.vue');
@@ -28832,7 +28852,7 @@ Vue.nextTick(function () {
 
 vm.fetch();
 
-},{"../../node_modules/vue/dist/vue.js":10,"./partials/Adsense.vue":16,"./partials/PageFooter.vue":22,"./partials/PageHeader.vue":23,"./partials/PageNav.vue":24,"./views/AllView.vue":25,"./views/DetailView.vue":26,"./views/FavouritesView.vue":27,"./views/GuideView.vue":28,"./views/HomeView.vue":29,"./views/InfoView.vue":30,"fuse.js":1,"jquery":2,"lity":3,"vue-resource":7,"vue-router":8}],15:[function(require,module,exports){
+},{"../../node_modules/vue/dist/vue.js":10,"./partials/Adsense.vue":16,"./partials/PageFooter.vue":22,"./partials/PageHeader.vue":23,"./partials/PageNav.vue":24,"./score.js":25,"./views/AllView.vue":26,"./views/DetailView.vue":27,"./views/FavouritesView.vue":28,"./views/GuideView.vue":29,"./views/HomeView.vue":30,"./views/InfoView.vue":31,"fuse.js":1,"jquery":2,"lity":3,"vue-resource":7,"vue-router":8}],15:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -28916,9 +28936,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-12", __vue__options__)
+    hotAPI.createRecord("data-v-13", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-12", __vue__options__)
+    hotAPI.rerender("data-v-13", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],18:[function(require,module,exports){
@@ -28929,22 +28949,33 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = {
-    props: ['item']
+    props: ['item'],
+    computed: {
+        quality: function quality() {
+            return Score.quality(this.item);
+        },
+        pullStrength: function pullStrength() {
+            return Score.pullStrength(this.item);
+        },
+        weightedStrength: function weightedStrength() {
+            return Score.weightedStrength(this.item);
+        }
+    }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(0)," ",_h('td',[_h('b',[_s(item.price_per_kg?item.price_per_kg+' €':'n/a')])])])," ",_h('tr',[_m(1)," ",_h('td',[_h('b',[_s(item.ease_of_use?item.ease_of_use+'/5':'n/a')])])])," ",_h('tr',[_m(2)," ",_h('td',[_h('b',[_s(item.strength.misc.temperature_stability?item.strength.misc.temperature_stability+'/5':'n/a')])])])])," ",_h('table',{staticClass:"table"},[_h('tr',[_m(3)," ",_h('td',[_h('b',[_s(item.printer.nozzle_temp)+" °C"])])])," ",_h('tr',[_m(4)," ",_h('td',[_h('b',[_s(item.printer.bed_temp)+" °C"])])])," ",_h('tr',[_m(5)," ",_h('td',[_h('b',[_s(item.printer.bed_material)])])])," ",_h('tr',[_m(6)," ",_h('td',[_h('b',[_s(item.printer.fan)+" %"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(7)," ",_h('td',[_s(item.quality.threedbenchy)+"/5"])])," ",_h('tr',[_m(8)," ",_h('td',[_s(item.quality.overhangs)+"/5"])])," ",_h('tr',[_m(9)," ",_h('td',[_s(item.quality.details)+"/5"])])," ",_h('tr',[_m(10)," ",_h('td',[_s(item.quality.bridges)+"/5"])])," ",_h('tr',[_m(11)," ",_h('td',[_s(item.quality.warp)])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(12)," ",_h('td',[_h('b',[_s(item.quality.rated)+"/20"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(13)," ",_h('td',[_s(item.strength.bend.strength)+" kg"])])," ",_h('tr',[_m(14)," ",_h('td',[_s(item.strength.bend.adhesion)+" kg"])])," ",_h('tr',[_m(15)," ",_h('td',[_s(item.strength.pull.strength)+" kg"])])," ",_h('tr',[_m(16)," ",_h('td',[_s(item.strength.pull.adhesion)+" kg"])])," ",_h('tr',{directives:[{name:"show",rawName:"v-show",value:(item.strength.misc.bendflex),expression:"item.strength.misc.bendflex"}]},[_m(17)," ",_h('td',[_h('b',[_s(item.strength.misc.bendflex)+" mm"])])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(18)," ",_h('td',[_h('b',[_s(item.strength.rated)+" kg"])])])])])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('td',["Retail Price per kg"])}},function(){with(this){return _h('td',["Ease of use"])}},function(){with(this){return _h('td',["Temperature stability"])}},function(){with(this){return _h('td',["Nozzle Temperature"])}},function(){with(this){return _h('td',["\n                    Print Bed Temperature\n                    ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=eure74A9HNc","data-lity":""}},[_h('i',{staticClass:"fa fa-question-circle is-gray"})])])}},function(){with(this){return _h('td',["Print Bed Material"])}},function(){with(this){return _h('td',["Cooling Fan"])}},function(){with(this){return _h('td',["3D Benchy Score"])}},function(){with(this){return _h('td',["Overhangs"])}},function(){with(this){return _h('td',["Fine Details"])}},function(){with(this){return _h('td',["Bridges"])}},function(){with(this){return _h('td',["Warp"])}},function(){with(this){return _h('td',["Overall Quality"])}},function(){with(this){return _h('td',["Bend - Layer strength"])}},function(){with(this){return _h('td',["Bend - Layer adhesion"])}},function(){with(this){return _h('td',["Pull - Layer strength"])}},function(){with(this){return _h('td',["Pull - Layer adhesion"])}},function(){with(this){return _h('td',["Bend flex at 1kg load"])}},function(){with(this){return _h('td',["Rated Strength"])}}]
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"columns"},[_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(0)," ",_h('td',[_h('b',[_s(item.price_per_kg?item.price_per_kg+' €':'n/a')])])])," ",_h('tr',[_m(1)," ",_h('td',[_h('b',[_s(item.ease_of_use?item.ease_of_use+'/5':'n/a')])])])," ",_h('tr',[_m(2)," ",_h('td',[_h('b',[_s(item.strength.misc.temperature_stability?item.strength.misc.temperature_stability+'/5':'n/a')])])])])," ",_h('table',{staticClass:"table"},[_h('tr',[_m(3)," ",_h('td',[_h('b',[_s(item.printer.nozzle_temp)+" °C"])])])," ",_h('tr',[_m(4)," ",_h('td',[_h('b',[_s(item.printer.bed_temp)+" °C"])])])," ",_h('tr',[_m(5)," ",_h('td',[_h('b',[_s(item.printer.bed_material)])])])," ",_h('tr',[_m(6)," ",_h('td',[_h('b',[_s(item.printer.fan)+" %"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(7)," ",_h('td',[_s(item.quality.threedbenchy)+"/5"])])," ",_h('tr',[_m(8)," ",_h('td',[_s(item.quality.overhangs)+"/5"])])," ",_h('tr',[_m(9)," ",_h('td',[_s(item.quality.details)+"/5"])])," ",_h('tr',[_m(10)," ",_h('td',[_s(item.quality.bridges)+"/5"])])," ",_h('tr',[_m(11)," ",_h('td',[_s(item.quality.warp)])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(12)," ",_h('td',[_h('b',[_s(quality)+"/20"])])])])])," ",_h('div',{staticClass:"column"},[_h('table',{staticClass:"table"},[_h('tr',[_m(13)," ",_h('td',[_s(item.strength.bend.strength)+" kg"])])," ",_h('tr',[_m(14)," ",_h('td',[_s(item.strength.bend.adhesion)+" kg"])])," ",_h('tr',[_m(15)," ",_h('td',[_s(item.strength.pull.strength)+" kg"])])," ",_h('tr',[_m(16)," ",_h('td',[_s(item.strength.pull.adhesion)+" kg"])])," ",_h('tr',{directives:[{name:"show",rawName:"v-show",value:(item.strength.misc.bendflex),expression:"item.strength.misc.bendflex"}]},[_m(17)," ",_h('td',[_h('b',[_s(item.strength.misc.bendflex)+" mm"])])])," ",_h('tr',{directives:[{name:"show",rawName:"v-show",value:(item.strength.weighted),expression:"item.strength.weighted"}]},[_m(18)," ",_h('td',[_h('b',[_s(weightedStrength)+" kg"])])])," ",_h('tr',{staticClass:"is-highlighted"},[_m(19)," ",_h('td',[_h('b',[_s(pullStrength)])])])])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('td',["Retail Price per kg"])}},function(){with(this){return _h('td',["Ease of use"])}},function(){with(this){return _h('td',["Temperature stability"])}},function(){with(this){return _h('td',["Nozzle Temperature"])}},function(){with(this){return _h('td',["\n                    Print Bed Temperature\n                    ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=eure74A9HNc","data-lity":""}},[_h('i',{staticClass:"fa fa-question-circle is-gray"})])])}},function(){with(this){return _h('td',["Print Bed Material"])}},function(){with(this){return _h('td',["Cooling Fan"])}},function(){with(this){return _h('td',["3D Benchy Score"])}},function(){with(this){return _h('td',["Overhangs"])}},function(){with(this){return _h('td',["Fine Details"])}},function(){with(this){return _h('td',["Bridges"])}},function(){with(this){return _h('td',["Warp"])}},function(){with(this){return _h('td',["Overall Quality"])}},function(){with(this){return _h('td',["Bend - Layer strength"])}},function(){with(this){return _h('td',["Bend - Layer adhesion"])}},function(){with(this){return _h('td',["Pull - Layer strength"])}},function(){with(this){return _h('td',["Pull - Layer adhesion"])}},function(){with(this){return _h('td',["Bend flex at 1kg load"])}},function(){with(this){return _h('td',["Weighted strength rating"])}},function(){with(this){return _h('td',["Pull Test Rating"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18", __vue__options__)
+    hotAPI.createRecord("data-v-17", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-18", __vue__options__)
+    hotAPI.rerender("data-v-17", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],19:[function(require,module,exports){
@@ -28972,9 +29003,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-17", __vue__options__)
+    hotAPI.createRecord("data-v-18", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-17", __vue__options__)
+    hotAPI.rerender("data-v-18", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],20:[function(require,module,exports){
@@ -29013,9 +29044,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-15", __vue__options__)
+    hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-15", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],22:[function(require,module,exports){
@@ -29028,9 +29059,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],23:[function(require,module,exports){
@@ -29043,9 +29074,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],24:[function(require,module,exports){
@@ -29080,12 +29111,27 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6", __vue__options__)
+    hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}],25:[function(require,module,exports){
+"use strict";
+
+module.exports = {
+    quality: function quality(filament) {
+        return filament.quality.threedbenchy + filament.quality.overhangs + filament.quality.details + filament.quality.bridges;
+    },
+    pullStrength: function pullStrength(filament) {
+        return Math.round((Math.min(32 * 1.2, filament.strength.pull.strength * 1.5) + Math.min(32 * 1.2, filament.strength.pull.adhesion * 2)) / 0.6 * 2) / 2;
+    },
+    weightedStrength: function weightedStrength(filament) {
+        return Math.round((Math.min(32, filament.strength.bend.strength * 2.5) + Math.min(32, filament.strength.bend.adhesion * 5) + Math.min(32, filament.strength.pull.strength * 1.5) + Math.min(32, filament.strength.pull.adhesion * 2)) * 2) / 2;
+    }
+};
+
+},{}],26:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29110,12 +29156,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
-},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],26:[function(require,module,exports){
+},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29153,12 +29199,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
-},{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":17,"vue":9,"vue-hot-reload-api":6}],27:[function(require,module,exports){
+},{"../components/Filament.vue":11,"../partials/CollectionEmpty.vue":17,"vue":9,"vue-hot-reload-api":6}],28:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29199,12 +29245,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
-},{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],28:[function(require,module,exports){
+},{"../components/FilamentCollection.vue":12,"../mixins/ManagesFavourites.js":15,"vue":9,"vue-hot-reload-api":6}],29:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29225,12 +29271,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-5", __vue__options__)
   }
 })()}
-},{"vue":9,"vue-hot-reload-api":6}],29:[function(require,module,exports){
+},{"vue":9,"vue-hot-reload-api":6}],30:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29260,7 +29306,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
-},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],30:[function(require,module,exports){
+},{"../components/FilamentCollection.vue":12,"vue":9,"vue-hot-reload-api":6}],31:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -29281,9 +29327,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8", __vue__options__)
+    hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":9,"vue-hot-reload-api":6}]},{},[14]);

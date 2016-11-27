@@ -126,8 +126,8 @@
                     if(
                             that.matchingFilter(that.filter_material, item.material) &&
                             that.maximumFilter(that.filter_price, item.price_per_kg) &&
-                            that.minimumFilter(that.filter_quality, item.quality.rated) &&
-                            that.minimumFilter(that.filter_strength, item.strength.rated)
+                            that.minimumFilter(that.filter_quality, Score.quality(item)) &&
+                            that.minimumFilter(that.filter_strength, Score.pullStrength(item))
                     ){
                         filtered.push(item);
                     }
@@ -145,10 +145,10 @@
                     sorted = this.propSorter(filtered, 'price_per_kg');
                 }else if(this.sort_mode === 'quality'){
                     //by quality
-                    sorted = this.propSorter(filtered, 'quality.rated').reverse();
+                    sorted = this.closureSorter(filtered, function(f){return Score.quality(f)}).reverse();
                 }else if(this.sort_mode === 'strength'){
                     //by strength
-                    sorted = this.propSorter(filtered, 'strength.rated').reverse();
+                    sorted = this.closureSorter(filtered, function(f){return Score.pullStrength(f)}).reverse();
                 }else if(this.sort_mode === 'ease_of_use'){
                     //by ease of use
                     sorted = this.propSorter(filtered, 'ease_of_use').reverse();
@@ -209,6 +209,16 @@
                     if ( that.dotNotation(a, prop) < that.dotNotation(b, prop) )
                         return -1;
                     if ( that.dotNotation(a, prop) > that.dotNotation(b, prop) )
+                        return 1;
+                    return 0;
+                });
+            },
+
+            closureSorter(items, closure){
+                return items.sort(function(a, b){
+                    if ( closure(a) < closure(b) )
+                        return -1;
+                    if ( closure(a) > closure(b) )
                         return 1;
                     return 0;
                 });
