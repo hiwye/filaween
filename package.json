@@ -24,6 +24,7 @@
     "lity": "^2.2.0",
     "vue": "^2.0.3",
     "vue-focus": "^2.0.0",
+    "vue-lazyload": "^0.9.3",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1",
     "vueify": "^9.2.4"

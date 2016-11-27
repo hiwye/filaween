@@ -4,7 +4,7 @@
             <div class="media-left">
                 <figure class="image is-128x128">
                     <a :href="'./assets/filament-images/'+item.id+'.png'" data-lity>
-                        <img :src="'./assets/filament-images/'+item.id+'.png'" :alt="'Image of '+item.brand+' '+item.product">
+                        <img v-lazy="'./assets/filament-images/'+item.id+'.png'" :alt="'Image of '+item.brand+' '+item.product">
                     </a>
                 </figure>
             </div>
