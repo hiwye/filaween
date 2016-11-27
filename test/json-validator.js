@@ -110,11 +110,11 @@ var validate = validator({
                         properties: {
                             strength: {
                                 required: true,
-                                type: "number"
+                                type: ["number", "null"]
                             },
                             adhesion: {
                                 required: true,
-                                type: "number"
+                                type: ["number", "null"]
                             }
                         }
                     },

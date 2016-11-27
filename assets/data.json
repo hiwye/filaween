@@ -818,5 +818,46 @@
       "purchase":null
     },
     "id":"dasfilament-petg"
+  },
+  {
+    "material":"PA",
+    "brand":"Taulman",
+    "product":"Bridge",
+    "printer":{
+      "nozzle_temp":250,
+      "bed_material":"Glue Stick",
+      "bed_temp":50,
+      "fan":0
+    },
+    "price_per_kg":40,
+    "quality":{
+      "rated":14,
+      "threedbenchy":4,
+      "overhangs":4,
+      "details":3,
+      "bridges":3,
+      "warp":"slight"
+    },
+    "strength":{
+      "rated":128,
+      "bend":{
+        "strength":null,
+        "adhesion":3.54
+      },
+      "pull":{
+        "strength":40,
+        "adhesion":25
+      },
+      "misc":{
+        "bendflex":19,
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=Zim_SmbwBUE",
+      "purchase":null
+    },
+    "id":"taulman-bridge-pa"
   }
 ]
