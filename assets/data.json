@@ -663,6 +663,45 @@
     "id":"rigidink-asa-asa"
   },
   {
+    "material":"TPE",
+    "brand":"Polymaker",
+    "product":"PolyFlex",
+    "printer":{
+      "nozzle_temp":225,
+      "bed_material":"Magigoo",
+      "bed_temp":50,
+      "fan":100
+    },
+    "price_per_kg":82,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":3,
+      "details":3,
+      "bridges":4,
+      "warp":"n/a"
+    },
+    "strength":{
+      "bend":{
+        "strength":null,
+        "adhesion":null
+      },
+      "pull":{
+        "strength":25,
+        "adhesion":9.49
+      },
+      "misc":{
+        "bendflex":null,
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":4,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=SuQ7Ad73bgs",
+      "purchase":null
+    },
+    "id":"polymaker-polyflex-tpe"
+  },
+  {
     "material":"PLA Composite",
     "brand":"3DPrima",
     "product":"PrimaSelect METAL - Copper",
