@@ -856,5 +856,44 @@
       "purchase":null
     },
     "id":"taulman-bridge-pa"
+  },
+  {
+    "material":"PA Composite",
+    "brand":"Matterhackers",
+    "product":"NylonX",
+    "printer":{
+      "nozzle_temp":260,
+      "bed_material":"Glue Stick",
+      "bed_temp":65,
+      "fan":0
+    },
+    "price_per_kg":144,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":3,
+      "bridges":1,
+      "warp":"slight"
+    },
+    "strength":{
+      "bend":{
+        "strength":4.3,
+        "adhesion":3.94
+      },
+      "pull":{
+        "strength":11.36,
+        "adhesion":11.83
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":2,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=m6i7oHQ8jks",
+      "purchase":null
+    },
+    "id":"matterhackers-nylonx-pacomposite"
   }
 ]
