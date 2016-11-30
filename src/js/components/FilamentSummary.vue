@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Rated Strength</p>
-                                    <p class="title">{{pullStrength}}</p>
+                                    <p class="title">{{strength}} kg</p>
                                 </div>
                                 <div class="level-item has-text-centered">
                                     <p class="heading">Ease of use</p>
@@ -52,8 +52,8 @@
             quality(){
                 return Score.quality(this.item);
             },
-            pullStrength(){
-                return Score.pullStrength(this.item);
+            strength(){
+                return Score.strength(this.item);
             }
         }
     }

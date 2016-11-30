@@ -93,13 +93,9 @@
                     <td>Bend flex at 1kg load</td>
                     <td><b>{{item.strength.misc.bendflex}} mm</b></td>
                 </tr>
-                <tr v-show="item.strength.weighted">
-                    <td>Weighted strength rating</td>
-                    <td><b>{{weightedStrength}} kg</b></td>
-                </tr>
-                <tr class="is-highlighted">
-                    <td>Pull Test Rating</td>
-                    <td><b>{{pullStrength}}</b></td>
+                <tr>
+                    <td>Strength rating</td>
+                    <td><b>{{strength}} kg</b></td>
                 </tr>
             </table>
         </div>
@@ -112,11 +108,8 @@
             quality(){
                 return Score.quality(this.item);
             },
-            pullStrength(){
-                return Score.pullStrength(this.item);
-            },
-            weightedStrength(){
-                return Score.weightedStrength(this.item);
+            strength(){
+                return Score.strength(this.item);
             }
         }
     }

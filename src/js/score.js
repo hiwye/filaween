@@ -5,6 +5,14 @@ module.exports = {
                 filament.quality.details +
                 filament.quality.bridges
     },
+    strength: function(filament){
+        var weighted = this.weightedStrength(filament);
+        if(weighted === null){
+            return this.pullStrength(filament);
+        }
+        return weighted;
+
+    },
     pullStrength: function(filament){
         return Math.round(
             (
@@ -14,6 +22,10 @@ module.exports = {
         ) / 2
     },
     weightedStrength: function(filament){
+        if(filament.strength.bend.strength === null && filament.strength.bend.adhesion === null){
+            return null;
+        }
+
         return Math.round(
             (
                 Math.min(32, filament.strength.bend.strength*2.5) +

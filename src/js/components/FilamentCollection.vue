@@ -127,7 +127,7 @@
                             that.matchingFilter(that.filter_material, item.material) &&
                             that.maximumFilter(that.filter_price, item.price_per_kg) &&
                             that.minimumFilter(that.filter_quality, Score.quality(item)) &&
-                            that.minimumFilter(that.filter_strength, Score.pullStrength(item))
+                            that.minimumFilter(that.filter_strength, Score.strength(item))
                     ){
                         filtered.push(item);
                     }
