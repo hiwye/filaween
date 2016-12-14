@@ -895,5 +895,44 @@
       "purchase":null
     },
     "id":"matterhackers-nylonx-pacomposite"
+  },
+  {
+    "material":"ABS",
+    "brand":"REC",
+    "product":"ABS",
+    "printer":{
+      "nozzle_temp":235,
+      "bed_material":"PEI",
+      "bed_temp":100,
+      "fan":0
+    },
+    "price_per_kg":144,
+    "quality":{
+      "threedbenchy":4,
+      "overhangs":1,
+      "details":5,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "bend":{
+        "strength":4.27,
+        "adhesion":3.36
+      },
+      "pull":{
+        "strength":8.26,
+        "adhesion":5.05
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":4
+      }
+    },
+    "ease_of_use":3,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=LAVifuAFPqY",
+      "purchase":null
+    },
+    "id":"rec-abs"
   }
 ]
