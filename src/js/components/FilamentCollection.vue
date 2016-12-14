@@ -4,8 +4,7 @@
             <input v-model="search"
                    type="text"
                    class="input is-large is-expanded"
-                   placeholder="Enter a brand, product, or material"
-                   v-focus="true">
+                   placeholder="Enter a brand, product, or material">
             <button
                     class="button is-large hint--right"
                     :class="{'is-success':show_filters}"
@@ -77,11 +76,9 @@
     var Filament = require('./FilamentSummary.vue');
     var CollectionEmpty = require('../partials/CollectionEmpty.vue');
     var IntroSection = require('../partials/IntroSection.vue');
-    import {focus} from 'vue-focus';
     export default {
         props: ['items','searchable', 'filterable', 'browseable', 'featured'],
         components: {Filament, CollectionEmpty, IntroSection},
-        directives: {focus},
         data () {
             return {
                 search: '',
