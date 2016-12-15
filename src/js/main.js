@@ -7,7 +7,6 @@ const GEO_API_URL = 'https://freegeoip.net/json/';
 window.Vue = require('../../node_modules/vue/dist/vue.js');
 window.VueResource = require('vue-resource');
 window.VueRouter = require('vue-router');
-window.VueLazyload = require('vue-lazyload');
 window.Zepto = require('jquery');
 window.Lity = require('lity');
 window.Fuse = require('fuse.js');
@@ -46,7 +45,6 @@ router.afterEach(function (transition) {
 
 // Vue Setup
 Vue.use(VueRouter);
-Vue.use(VueLazyload, {preLoad: 1.5});
 var vm = new Vue({
     el: '#app',
     router,
