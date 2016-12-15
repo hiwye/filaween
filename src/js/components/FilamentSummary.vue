@@ -3,13 +3,13 @@
         <article class="media">
             <div class="media-left">
                 <figure class="image is-128x128">
-                    <a :href="'./assets/filament-images/'+item.id+'.png'" data-lity>
+                    <a :href="'./assets/hires-images/'+item.id+'.jpg'" data-lity>
                         <img v-lazy="'./assets/filament-images/'+item.id+'.png'" :alt="'Image of '+item.brand+' '+item.product">
                     </a>
                 </figure>
             </div>
             <div class="media-content">
-                <div class="content">
+                <diiv class="content">
                     <div class="columns">
                         <div class="column is-desktop">
                             <filament-header :item="item"></filament-header>
@@ -36,7 +36,7 @@
                             <filament-footer :item="item"></filament-footer>
                         </div>
                     </div>
-                </div>
+                </diiv>
             </div>
         </article>
     </div>
