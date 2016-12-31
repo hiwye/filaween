@@ -944,7 +944,7 @@
       "bed_material":"PEI",
       "bed_temp":55,
       "fan":100
-    },
+    },~
     "price_per_kg":48,
     "quality":{
       "threedbenchy":5,

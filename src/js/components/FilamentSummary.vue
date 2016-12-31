@@ -9,7 +9,7 @@
                 </figure>
             </div>
             <div class="media-content">
-                <diiv class="content">
+                <div class="content">
                     <div class="columns">
                         <div class="column is-desktop">
                             <filament-header :item="item"></filament-header>
@@ -36,7 +36,7 @@
                             <filament-footer :item="item"></filament-footer>
                         </div>
                     </div>
-                </diiv>
+                </div>
             </div>
         </article>
     </div>
