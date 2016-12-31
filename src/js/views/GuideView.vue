@@ -9,23 +9,22 @@
                 <a href="https://www.youtube.com/watch?v=jpAlrM5OyeQ">beginner videos</a>.
             </div>
 
-            <div class="columns is-multiline">
-                <div class="column is-one-quarter" v-for="item in guide">
-                    <div class="card is-fullheight">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img :src="'./assets/guide-images/'+item.id+'.png'" :alt="'Image of '+item.title+' filament'">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <p class="title is-4">{{item.title}}</p>
-                            <p class="subtitle is-6">{{item.claim}}</p>
-                            <div class="content">
+            <div class="box" v-for="item in guide">
+                <div class="media">
+                    <figure class="media-left">
+                        <p class="image is-128x128">
+                            <img :src="'./assets/filament-images/'+item.image+'.png'" :alt="'Image of '+item.title+' filament'">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h3 class="title is-5">
+                                <b>{{item.title}}</b>
+                                - {{item.claim}}
+                            </h3>
+                            <p>
                                 {{item.description}}
-                                <br>
-                                <small v-show="item.nozzle_temperature">Prints at {{item.nozzle_temperature}} °C</small><br>
-                                <small v-show="item.bed_temperature">Bed temp. is {{item.bed_temperature}} °C{{item.bed_required?'':', but is not required'}}</small>
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>

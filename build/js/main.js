@@ -28519,7 +28519,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-12", __vue__options__)
   } else {
-    hotAPI.reload("data-v-12", __vue__options__)
+    hotAPI.rerender("data-v-12", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":8,"vue-hot-reload-api":5}],11:[function(require,module,exports){
@@ -28696,7 +28696,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-11", __vue__options__)
+    hotAPI.rerender("data-v-11", __vue__options__)
   }
 })()}
 },{"../partials/CollectionEmpty.vue":16,"../partials/IntroSection.vue":20,"./FilamentSummary.vue":12,"vue":8,"vue-hot-reload-api":5}],12:[function(require,module,exports){
@@ -28736,7 +28736,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-14", __vue__options__)
   } else {
-    hotAPI.reload("data-v-14", __vue__options__)
+    hotAPI.rerender("data-v-14", __vue__options__)
   }
 })()}
 },{"../partials/FilamentColumns.vue":17,"../partials/FilamentFooter.vue":18,"../partials/FilamentHeader.vue":19,"vue":8,"vue-hot-reload-api":5}],13:[function(require,module,exports){
@@ -28887,7 +28887,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.rerender("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],16:[function(require,module,exports){
@@ -28902,7 +28902,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-13", __vue__options__)
   } else {
-    hotAPI.reload("data-v-13", __vue__options__)
+    hotAPI.rerender("data-v-13", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],17:[function(require,module,exports){
@@ -28936,7 +28936,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-18", __vue__options__)
   } else {
-    hotAPI.reload("data-v-18", __vue__options__)
+    hotAPI.rerender("data-v-18", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],18:[function(require,module,exports){
@@ -28966,7 +28966,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-17", __vue__options__)
   } else {
-    hotAPI.reload("data-v-17", __vue__options__)
+    hotAPI.rerender("data-v-17", __vue__options__)
   }
 })()}
 },{"../mixins/ManagesFavourites.js":14,"vue":8,"vue-hot-reload-api":5}],19:[function(require,module,exports){
@@ -28992,7 +28992,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-16", __vue__options__)
   } else {
-    hotAPI.reload("data-v-16", __vue__options__)
+    hotAPI.rerender("data-v-16", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],20:[function(require,module,exports){
@@ -29007,7 +29007,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-15", __vue__options__)
   } else {
-    hotAPI.reload("data-v-15", __vue__options__)
+    hotAPI.rerender("data-v-15", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],21:[function(require,module,exports){
@@ -29022,7 +29022,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.reload("data-v-10", __vue__options__)
+    hotAPI.rerender("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],22:[function(require,module,exports){
@@ -29037,7 +29037,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6", __vue__options__)
+    hotAPI.rerender("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],23:[function(require,module,exports){
@@ -29074,7 +29074,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.rerender("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],24:[function(require,module,exports){
@@ -29130,7 +29130,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":11,"vue":8,"vue-hot-reload-api":5}],26:[function(require,module,exports){
@@ -29173,7 +29173,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.rerender("data-v-4", __vue__options__)
   }
 })()}
 },{"../components/Filament.vue":10,"../partials/CollectionEmpty.vue":16,"vue":8,"vue-hot-reload-api":5}],27:[function(require,module,exports){
@@ -29219,7 +29219,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":11,"../mixins/ManagesFavourites.js":14,"vue":8,"vue-hot-reload-api":5}],28:[function(require,module,exports){
@@ -29236,8 +29236,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_m(0)," ",_m(1)," ",_h('div',{staticClass:"columns is-multiline"},[_l((guide),function(item){return _h('div',{staticClass:"column is-one-quarter"},[_h('div',{staticClass:"card is-fullheight"},[_h('div',{staticClass:"card-image"},[_h('figure',{staticClass:"image is-4by3"},[_h('img',{attrs:{"src":'./assets/guide-images/'+item.id+'.png',"alt":'Image of '+item.title+' filament'}})])])," ",_h('div',{staticClass:"card-content"},[_h('p',{staticClass:"title is-4"},[_s(item.title)])," ",_h('p',{staticClass:"subtitle is-6"},[_s(item.claim)])," ",_h('div',{staticClass:"content"},["\n                            "+_s(item.description)+"\n                            ",_m(2,true)," ",_h('small',{directives:[{name:"show",rawName:"v-show",value:(item.nozzle_temperature),expression:"item.nozzle_temperature"}]},["Prints at "+_s(item.nozzle_temperature)+" °C"]),_m(3,true)," ",_h('small',{directives:[{name:"show",rawName:"v-show",value:(item.bed_temperature),expression:"item.bed_temperature"}]},["Bed temp. is "+_s(item.bed_temperature)+" °C"+_s(item.bed_required?'':', but is not required')])])])])])})])])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',{staticClass:"title"},["Material Guide"])}},function(){with(this){return _h('div',{staticClass:"notification"},[_h('b',["New to 3D-Printing in General?"]),"\n            Learn everything about the topic using Thomas Sanladerer's excellent\n            ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=jpAlrM5OyeQ"}},["beginner videos"]),".\n        "])}},function(){with(this){return _h('br')}},function(){with(this){return _h('br')}}]
+__vue__options__.render = function(){with(this){return _h('div',{staticClass:"container"},[_h('div',{staticClass:"content"},[_m(0)," ",_m(1)," ",_l((guide),function(item){return _h('div',{staticClass:"box"},[_h('div',{staticClass:"media"},[_h('figure',{staticClass:"media-left"},[_h('p',{staticClass:"image is-128x128"},[_h('img',{attrs:{"src":'./assets/filament-images/'+item.image+'.png',"alt":'Image of '+item.title+' filament'}})])])," ",_h('div',{staticClass:"media-content"},[_h('div',{staticClass:"content"},[_h('h3',{staticClass:"title is-5"},[_h('b',[_s(item.title)]),"\n                            - "+_s(item.claim)+"\n                        "])," ",_h('p',["\n                            "+_s(item.description)+"\n                        "])])])])])})])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',{staticClass:"title"},["Material Guide"])}},function(){with(this){return _h('div',{staticClass:"notification"},[_h('b',["New to 3D-Printing in General?"]),"\n            Learn everything about the topic using Thomas Sanladerer's excellent\n            ",_h('a',{attrs:{"href":"https://www.youtube.com/watch?v=jpAlrM5OyeQ"}},["beginner videos"]),".\n        "])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -29245,7 +29245,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7", __vue__options__)
+    hotAPI.rerender("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}],29:[function(require,module,exports){
@@ -29275,7 +29275,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"../components/FilamentCollection.vue":11,"vue":8,"vue-hot-reload-api":5}],30:[function(require,module,exports){
@@ -29301,7 +29301,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.rerender("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":8,"vue-hot-reload-api":5}]},{},[13]);

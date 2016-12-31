@@ -1,38 +1,30 @@
 [
   {
-    "title":"PLA",
-    "claim":"Your versatile allrounder.",
-    "description":"PLA is one of the two most commonly used filament materials. It is commonly recommended for beginners due to it's ease of use.",
-    "nozzle_temperature":"180-220",
-    "bed_temperature":"20-55",
-    "bed_required":false,
-    "id":"pla"
-  },
-  {
     "title":"ABS",
-    "claim":"When durability counts.",
-    "description":"ABS also belongs to the most commonly used material. It is best used when making durable parts that should be able to withstand high temperatures.",
-    "nozzle_temperature":"220-235",
-    "bed_temperature":"80-110",
-    "bed_required":true,
+    "claim":"A tough material requiring advanced 3D printers.",
+    "description":"As an industry-standard plastic, ABS filament has gained a reputation of being strong and impact resistant, while still being stiff enough to be used for load-bearing 3D prints. But unless printed in an enclosed build chamber, the layer adhesion and resulting strength of ABS prints will be much lower than that of other filament choices and the fumes from the printed filament will likely give you a headache. Along with PLA, ABS filaments are some of the cheapest 3D printing filament you can buy and is a good choice for mechanical parts in contact with hotter components.",
+    "image":"generic-abs",
     "id":"abs"
   },
   {
-    "title":"PETG",
-    "claim":"High strength and food-safe.",
-    "description":"PETG is a very strong material. It's FDA approved for food-safety. It almost doesn't warp, produces no odors when printing, and is very good at bridging.",
-    "nozzle_temperature":"230-255",
-    "bed_temperature":"55-70",
-    "bed_required":true,
+    "title":"PLA",
+    "claim":"A hard and easy to print plastic.",
+    "description":"PLA is the most widely used filament for 3D printing and does not require any specialty hardware. Most printers come with good default profiles that work well with a wide range PLA filaments. Strength is generally consistent, but prints made from PLA will easily soften and deform if exposed to heat. Due to the large choice in PLA filaments, it is a very affordable plastic and a good general-purpose choice.",
+    "image":"generic-pla",
+    "id":"pla"
+  },
+  {
+    "title":"Copolyesters (PETG)",
+    "claim":"Advanced 3D printing.",
+    "description":"Polyamide-based filaments offer properties no other material provides. Pure Nylon filaments are typically fairly soft and slippery and, as a result, make for nearly indestructible 3D prints. While Nylons can be printed on almost all 3D printers, great print results are often preceded by a lengthy tuning process. 3D printing with polyamide filaments does not create noxious fumes in the amount ABS does and could offer an alternative if a slightly softer material is acceptable.",
+    "image":"3dprima-primaselect-copolyester",
     "id":"petg"
   },
   {
-    "title":"Composites",
-    "claim":"Filaments with power-ups.",
-    "description":"Composite filaments combine plastics (PLA, ABS, etc.) with other ingredients (metals, sawdust, carbon fiber, etc.) to create materials with unique properties (such as magnetism).",
-    "nozzle_temperature":null,
-    "bed_temperature":null,
-    "bed_required":null,
-    "id":"composites"
+    "title":"TPE",
+    "claim":"Make it soft.",
+    "description":"TPE or thermoplastic elastomer filaments are an option if you want 3D prints that are softer and more flexible than if made from any other material. The term TPU or thermoplastic polyurethane refers to one type of elastic filament.",
+    "image":"polymaker-polyflex-tpe",
+    "id":"tpe"
   }
 ]
