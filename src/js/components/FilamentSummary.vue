@@ -3,9 +3,9 @@
         <article class="media">
             <div class="media-left">
                 <figure class="image is-128x128">
-                    <a :href="'./assets/hires-images/'+item.id+'.jpg'" data-lity>
+                    <router-link :to="'/browse/'+item.id">
                         <img :src="'./assets/filament-images/'+item.id+'.png'" :alt="'Image of '+item.brand+' '+item.product">
-                    </a>
+                    </router-link>
                 </figure>
             </div>
             <div class="media-content">
