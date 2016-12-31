@@ -934,5 +934,44 @@
       "purchase":null
     },
     "id":"rec-abs"
+  },
+  {
+    "material":"PLA Blend",
+    "brand":"Colorfabb",
+    "product":"PLA/PHA",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":100
+    },
+    "price_per_kg":48,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":5,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "bend":{
+        "strength":5.49,
+        "adhesion":3.16
+      },
+      "pull":{
+        "strength":12.15,
+        "adhesion":7.3
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=ihomRm6_Aeo",
+      "purchase":null
+    },
+    "id":"colorfabb-plapha-plablend"
   }
 ]
