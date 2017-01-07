@@ -973,5 +973,44 @@
       "purchase":null
     },
     "id":"colorfabb-plapha-plablend"
+  },
+  {
+    "material":"PLA",
+    "brand":"Polymaker",
+    "product":"Polymax",
+    "printer":{
+      "nozzle_temp":205,
+      "bed_material":"PEI",
+      "bed_temp":55,
+      "fan":100
+    },
+    "price_per_kg":70,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":4,
+      "details":5,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "bend":{
+        "strength":3.84,
+        "adhesion":3.11
+      },
+      "pull":{
+        "strength":13.5,
+        "adhesion":7.65
+      },
+      "misc":{
+        "bendflex":7,
+        "temperature_stability":null
+      }
+    },
+    "ease_of_use":5,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=4YCflzsccH4",
+      "purchase":null
+    },
+    "id":"polymaker-polymax-pla"
   }
 ]
