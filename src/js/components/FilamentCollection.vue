@@ -84,7 +84,7 @@
                 search: '',
                 show_filters: this.searchable && this.filterable == 1,
                 filter_material: '',
-                filter_price: 200,
+                filter_price: 400,
                 filter_quality: 0,
                 filter_strength: 0,
                 sort_mode: 'default'

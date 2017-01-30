@@ -1012,5 +1012,44 @@
       "purchase":null
     },
     "id":"polymaker-polymax-pla"
+  },
+  {
+    "material":"PA Composite",
+    "brand":"Markforged",
+    "product":"ONYX",
+    "printer":{
+      "nozzle_temp":275,
+      "bed_material":"Glue stick",
+      "bed_temp":0,
+      "fan":0
+    },
+    "price_per_kg":314,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":4,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "bend":{
+        "strength":null,
+        "adhesion":null
+      },
+      "pull":{
+        "strength":31,
+        "adhesion":23.73
+      },
+      "misc":{
+        "bendflex":12,
+        "temperature_stability":null
+      }
+    },
+    "ease_of_use":1,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=Oyb7wUHlPbI",
+      "purchase":null
+    },
+    "id":"markforged-onyx-pacomposite"
   }
 ]
