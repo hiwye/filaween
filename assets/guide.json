@@ -26,5 +26,12 @@
     "description":"TPE or thermoplastic elastomer filaments are an option if you want 3D prints that are softer and more flexible than if made from any other material. The term TPU or thermoplastic polyurethane refers to one type of elastic filament.",
     "image":"polymaker-polyflex-tpe",
     "id":"tpe"
+  },
+  {
+    "title":"PC",
+    "claim":"Effort gets rewarded.",
+    "description":"Polycarbonate filaments provide exceptional strength and stiffness, but are one of the most challenging materials. Requiring high print temperatures and enclosed build chambers, PC materials often tend to warp if printed on an unsuitable machine. However, if done right, polycarbonate will produce prints with not only great strength, but also good optical clarity. ",
+    "image":"generic-pc",
+    "id":"pc"
   }
 ]
