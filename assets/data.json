@@ -1051,5 +1051,44 @@
       "purchase":null
     },
     "id":"markforged-onyx-pacomposite"
+  },
+  {
+    "material":"PLA",
+    "brand":"UniCoFil",
+    "product":"Rainbow Pastel",
+    "printer":{
+      "nozzle_temp":210,
+      "bed_material":"Glue stick",
+      "bed_temp":55,
+      "fan":100
+    },
+    "price_per_kg":47,
+    "quality":{
+      "threedbenchy":5,
+      "overhangs":5,
+      "details":5,
+      "bridges":4,
+      "warp":"no"
+    },
+    "strength":{
+      "bend":{
+        "strength":5.2,
+        "adhesion":3.14
+      },
+      "pull":{
+        "strength":7.92,
+        "adhesion":3.97
+      },
+      "misc":{
+        "bendflex":5,
+        "temperature_stability":2
+      }
+    },
+    "ease_of_use":1,
+    "links":{
+      "video":"https://www.youtube.com/watch?v=1wrSkh8nhYk",
+      "purchase":null
+    },
+    "id":"unicofil-rainbowpastel-pla"
   }
 ]
